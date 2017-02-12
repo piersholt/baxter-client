@@ -42,10 +42,10 @@ export function selectAccount(account_id) {
 
 import { CALL_API } from 'redux-api-middleware';
 
-export function newSearch(id) {
+export function newSearch(parameters) {
   return {
     [CALL_API]: {
-      endpoint: 'http://localhost:3100/api/dev.json'.concat('?' + id),
+      endpoint: 'http://localhost:3100/api/dev.json'.concat('?' + parameters),
       method: 'GET',
       types: ['REQUEST', QueryActions.SEARCH_SUCCESS, 'FAILURE']
     }

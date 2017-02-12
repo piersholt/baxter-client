@@ -5,8 +5,10 @@ import { newSearch } from '../actions'
 
 let mapDispatchToProps = (dispatch) => {
   return {
-    paginateSearch: (id) => {
-      dispatch(newSearch(id));
+    paginateSearch: (parameters) => {
+      var param = require('jquery-param');
+      let url_parameters = param(parameters)
+      dispatch(newSearch(url_parameters));
     }
   }
 };

@@ -27,6 +27,19 @@ class Filter extends React.Component {
     });
   }
 
+  parameters() {
+    return {
+      segmentFashion: (this.state.segmentFashion),
+      segmentBeauty: (this.state.segmentBeauty),
+      segmentLifestyle: (this.state.segmentLifestyle),
+      segmentFood: (this.state.segmentFood),
+      segmentHealth: (this.state.segmentHealth),
+      segmentFitness: (this.state.segmentFitness),
+      minFollowers: (this.state.minFollowers),
+      maxFollowers: (this.state.maxFollowers)
+    }
+  }
+
   render() {
     return (
       <form>
@@ -100,7 +113,7 @@ class Filter extends React.Component {
               onChange={this.handleInputChange} />
           </label>
         </fieldset>
-        <button className="pull-right" onClick={() => this.props.paginateSearch('test')} type="button">Search</button>
+        <button className="pull-right" onClick={() => this.props.paginateSearch(this.parameters())} type="button">Search</button>
       </form>
     );
   }
