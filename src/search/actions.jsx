@@ -45,7 +45,7 @@ import { CALL_API } from 'redux-api-middleware';
 export function newSearch(id) {
   return {
     [CALL_API]: {
-      endpoint: 'http://localhost:3100/api/sample.json'.concat('?' + id),
+      endpoint: 'http://localhost:3100/api/dev.json'.concat('?' + id),
       method: 'GET',
       types: ['REQUEST', QueryActions.SEARCH_SUCCESS, 'FAILURE']
     }
@@ -55,7 +55,7 @@ export function newSearch(id) {
 export function paginateSearch() {
   return {
     [CALL_API]: {
-      endpoint: 'http://localhost:3100/api/dev.json'.concat('?'),
+      endpoint: 'http://localhost:3100/api/dev.json'.concat('?page=2'),
       method: 'GET',
       types: ['REQUEST', QueryActions.PAGINATE_SUCCESS, 'FAILURE']
     }
