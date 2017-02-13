@@ -2,6 +2,20 @@ import React from 'react';
 import { ResultContainer } from '../containers/result.jsx';
 
 class Results extends React.Component {
+  parameters() {
+    return {
+      segmentFashion: (this.props.search_parameters.segmentFashion),
+      segmentBeauty: (this.props.search_parameters.segmentBeauty),
+      segmentLifestyle: (this.props.search_parameters.segmentLifestyle),
+      segmentFood: (this.props.search_parameters.segmentFood),
+      segmentHealth: (this.props.search_parameters.segmentHealth),
+      segmentFitness: (this.props.search_parameters.segmentFitness),
+      minFollowers: (this.props.search_parameters.minFollowers),
+      maxFollowers: (this.props.search_parameters.maxFollowers),
+      page: (this.props.search_parameters.page)
+    }
+  }
+
   render () {
     // console.log('Results / Rendering...')
 
@@ -34,7 +48,7 @@ class Results extends React.Component {
         </thead>
         <tbody>
           { accounts }
-          <tr><button className="pull-right" onClick={() => this.props.paginateSearch('test')} type="button">Load More</button></tr>
+          <tr><button className="pull-right" onClick={() => this.props.paginateSearch(this.parameters())} type="button">Load More</button></tr>
         </tbody>
       </table> )
   }

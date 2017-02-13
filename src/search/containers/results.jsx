@@ -4,14 +4,15 @@ import { paginateSearch } from '../actions'
 
 let mapStateToProps = (state) => {
   return {
-    accounts: state.accounts
+    accounts: state.accounts,
+    search_parameters: state.search_parameters
   }
 };
 
 let mapDispatchToProps = (dispatch) => {
   return {
-    paginateSearch: (id) => {
-      dispatch(paginateSearch(id));
+    paginateSearch: (parameters) => {
+      dispatch(paginateSearch(parameters));
     }
   }
 };

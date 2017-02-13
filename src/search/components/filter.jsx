@@ -36,7 +36,8 @@ class Filter extends React.Component {
       segmentHealth: (this.state.segmentHealth),
       segmentFitness: (this.state.segmentFitness),
       minFollowers: (this.state.minFollowers),
-      maxFollowers: (this.state.maxFollowers)
+      maxFollowers: (this.state.maxFollowers),
+      page: 1
     }
   }
 

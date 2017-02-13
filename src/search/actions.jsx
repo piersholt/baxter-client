@@ -9,7 +9,9 @@ export const InterfaceActions = {
 }
 
 export const QueryActions = {
+  SEARCH_REQUEST: 'SEARCH_REQUEST',
   SEARCH_SUCCESS: 'SEARCH_SUCCESS',
+  PAGINATE_REQUEST: 'PAGINATE_REQUEST',
   PAGINATE_SUCCESS: 'PAGINATE_SUCCESS'
 }
 
@@ -43,21 +45,28 @@ export function selectAccount(account_id) {
 import { CALL_API } from 'redux-api-middleware';
 
 export function newSearch(parameters) {
+  var param = require('jquery-param');
+  let url_parameters = param(parameters)
   return {
     [CALL_API]: {
-      endpoint: 'http://localhost:3100/api/dev.json'.concat('?' + parameters),
+      endpoint: 'http://localhost:3100/api/dev.json'.concat('?' + url_parameters),
       method: 'GET',
-      types: ['REQUEST', QueryActions.SEARCH_SUCCESS, 'FAILURE']
+      types: [QueryActions.SEARCH_REQUEST, { type: QueryActions.SEARCH_SUCCESS, meta: { parameters: parameters} }, 'FAILURE']
     }
   }
 }
 
-export function paginateSearch() {
+export function paginateSearch(parameters) {
+  parameters.page = parameters.page + 1
+
+  var param = require('jquery-param');
+  let url_parameters = param(parameters)
+
   return {
     [CALL_API]: {
-      endpoint: 'http://localhost:3100/api/dev.json'.concat('?page=2'),
+      endpoint: 'http://localhost:3100/api/dev.json'.concat('?' + url_parameters),
       method: 'GET',
-      types: ['REQUEST', QueryActions.PAGINATE_SUCCESS, 'FAILURE']
+      types: [QueryActions.PAGINATE_REQUEST, { type: QueryActions.PAGINATE_SUCCESS, meta: { parameters: parameters} }, 'FAILURE']
     }
   }
 }

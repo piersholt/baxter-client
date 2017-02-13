@@ -10,6 +10,17 @@ function selected(state = false, action) {
   }
 }
 
+function search_parameters(state = {}, action) {
+  switch (action.type) {
+    case QueryActions.SEARCH_SUCCESS:
+      return Object.assign({}, state, action.meta.parameters)
+    case QueryActions.PAGINATE_SUCCESS:
+      return Object.assign({}, state, action.meta.parameters)
+    default:
+      return state
+  }
+}
+
 function foo(state = [], action) {
   switch (action.type) {
     // Interface
@@ -30,7 +41,8 @@ function foo(state = [], action) {
 function searchReducer(state = { selected: 123 }, action) {
   return {
     selected: selected(state.selected, action),
-    accounts: foo(state.accounts, action)
+    accounts: foo(state.accounts, action),
+    search_parameters: search_parameters(state.search_parameters, action)
   }
 }
 
