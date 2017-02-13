@@ -1,4 +1,4 @@
-import './App.css';
+import './BaxterApp.css';
 
 // Core
 import React, { Component } from 'react';
