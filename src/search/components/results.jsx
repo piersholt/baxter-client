@@ -40,7 +40,6 @@ class Results extends React.Component {
           <tr>
             <th></th>
             <th></th>
-            <th>Baxter Score</th>
             <th>Followers</th>
             <th>AEPP</th>
             <th>AER</th>
