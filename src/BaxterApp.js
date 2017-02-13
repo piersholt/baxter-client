@@ -7,8 +7,9 @@ import { Provider } from 'react-redux';
 import store from './store';
 
 // Components
-import Search from './search/components/search';
 import Header from './search/components/header';
+
+import { SearchContainer } from './search/containers/search';
 
 class App extends Component {
   render() {
@@ -16,7 +17,7 @@ class App extends Component {
       <div id="layout">
         <Header />
         <div className="container">
-          <Search />
+          <SearchContainer />
         </div>
       </div>
     );
