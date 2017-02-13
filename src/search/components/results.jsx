@@ -4,12 +4,21 @@ import { ResultContainer } from '../containers/result.jsx';
 class Results extends React.Component {
   parameters() {
     return {
-      segmentFashion: (this.props.search_parameters.segmentFashion),
-      segmentBeauty: (this.props.search_parameters.segmentBeauty),
-      segmentLifestyle: (this.props.search_parameters.segmentLifestyle),
-      segmentFood: (this.props.search_parameters.segmentFood),
-      segmentHealth: (this.props.search_parameters.segmentHealth),
-      segmentFitness: (this.props.search_parameters.segmentFitness),
+      segment: {
+        fashion: (this.props.search_parameters.segment.fashion),
+        beauty: (this.props.search_parameters.segment.beauty),
+        lifestyle: (this.props.search_parameters.segment.lifestyle),
+        food: (this.props.search_parameters.segment.food),
+        health: (this.props.search_parameters.segment.health),
+        fitness: (this.props.search_parameters.segment.fitness),
+      }, 
+      origin: {
+        VIC: (this.props.search_parameters.origin.VIC),
+        NSW: (this.props.search_parameters.origin.NSW),
+        QLD: (this.props.search_parameters.origin.QLD),
+        SA:(this.props.search_parameters.origin.SA),
+        WA:(this.props.search_parameters.origin.WA)
+      },
       minFollowers: (this.props.search_parameters.minFollowers),
       maxFollowers: (this.props.search_parameters.maxFollowers),
       page: (this.props.search_parameters.page)
