@@ -26,9 +26,9 @@ class Profile extends React.Component {
               <div className='col-md-4'></div>
             </div>
             <div className='row'>
-              <div className='col-md-4'>123</div>
-              <div className='col-md-4'>456</div>
-              <div className='col-md-4'>789</div>
+              <div className='col-md-4'>{this.props.counts.media}</div>
+              <div className='col-md-4'>{this.props.counts.followers}</div>
+              <div className='col-md-4'>{this.props.counts.following}</div>
             </div>
           </div>
         </div>
