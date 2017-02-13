@@ -3,22 +3,24 @@ import './BaxterApp.css';
 // Core
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
+import { Router, Route, Link, browserHistory } from 'react-router'
 
 import store from './store';
 
 // Components
 import Search from './search/components/search';
 
-class App extends Component {
+class BaxterApp extends Component {
   render() {
     return (
-      <div className="BaxterApp">
-        <Search />
-      </div>
+      <Provider store={store}>
+        <Router history={browserHistory}>
+           <Route path="/" component={Search}>
+           </Route>
+         </Router>
+      </Provider>
     );
   }
 }
-
-const BaxterApp = () => ( <Provider store={store}><App /></Provider> )
 
 export default BaxterApp;
