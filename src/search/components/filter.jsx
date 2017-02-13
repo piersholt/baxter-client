@@ -10,8 +10,13 @@ class Filter extends React.Component {
       segmentFood: (this.props.segmentFood === undefined ? false : true),
       segmentHealth: (this.props.segmentHealth === undefined ? false : true),
       segmentFitness: (this.props.segmentFitness === undefined ? false : true),
-      minFollowers: 2,
-      maxFollowers: 2
+      originVIC: (this.props.originVIC === undefined ? false : true),
+      originNSW: (this.props.originNSW === undefined ? false : true),
+      originQLD: (this.props.originQLD === undefined ? false : true),
+      originSA:(this.props.originSA === undefined ? false : true),
+      originWA:(this.props.originWA === undefined ? false : true),
+      minFollowers: 50,
+      maxFollowers: 100
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -29,12 +34,21 @@ class Filter extends React.Component {
 
   parameters() {
     return {
-      segmentFashion: (this.state.segmentFashion),
-      segmentBeauty: (this.state.segmentBeauty),
-      segmentLifestyle: (this.state.segmentLifestyle),
-      segmentFood: (this.state.segmentFood),
-      segmentHealth: (this.state.segmentHealth),
-      segmentFitness: (this.state.segmentFitness),
+      segment: {
+        fashion: (this.state.segmentFashion),
+        beauty: (this.state.segmentBeauty),
+        lifestyle: (this.state.segmentLifestyle),
+        food: (this.state.segmentFood),
+        health: (this.state.segmentHealth),
+        fitness: (this.state.segmentFitness)
+      },
+      origin: {
+        VIC: (this.state.originVIC),
+        NSW: (this.state.originNSW),
+        QLD: (this.state.originQLD),
+        SA:(this.state.originSA),
+        WA:(this.state.originWA)
+      },
       minFollowers: (this.state.minFollowers),
       maxFollowers: (this.state.maxFollowers),
       page: 1
@@ -44,6 +58,7 @@ class Filter extends React.Component {
   render() {
     return (
       <form>
+        {/*  SEGMENT */}
         <fieldset className="segment">
           <label>
             Fashion:
@@ -94,7 +109,50 @@ class Filter extends React.Component {
               onChange={this.handleInputChange} />
           </label>
         </fieldset>
-
+        <br />
+        {/*  ORIGIN */}
+        <fieldset className="segment">
+          <label>
+            Victoria:
+            <input
+              name="originVIC"
+              type="checkbox"
+              checked={this.state.originVIC}
+              onChange={this.handleInputChange} />
+          </label>
+          <label>
+            New South Wales:
+            <input
+              name="originNSW"
+              type="checkbox"
+              checked={this.state.originNSW}
+              onChange={this.handleInputChange} />
+          </label>
+          <label>
+            Queensland:
+            <input
+              name="originQLD"
+              type="checkbox"
+              checked={this.state.originQLD}
+              onChange={this.handleInputChange} />
+          </label>
+          <label>
+            South Australia:
+            <input
+              name="originSA"
+              type="checkbox"
+              checked={this.state.originSA}
+              onChange={this.handleInputChange} />
+          </label>
+          <label>
+            Western Australia:
+            <input
+              name="originWA"
+              type="checkbox"
+              checked={this.state.originWA}
+              onChange={this.handleInputChange} />
+          </label>
+        </fieldset>
         <br />
         <fieldset className="followers">
           <label>
