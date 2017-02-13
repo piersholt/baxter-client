@@ -6,7 +6,7 @@ class Profile extends React.Component {
 
     let posts = this.props.posts.map(
       function(object){
-        return <div className="col-md-6"><img width="100" role="presentation" src={object.image.thumbnail} /></div>;
+        return <div key={object.id} className="col-md-6"><img width="100" role="presentation" src={object.image.thumbnail} /></div>;
       }
     )
 
