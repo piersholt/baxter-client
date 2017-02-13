@@ -30,9 +30,9 @@ function foo(state = [], action) {
       return [...state].concat(action.accounts)
     // Query
     case QueryActions.PAGINATE_SUCCESS:
-      return [...state, ...action.payload]
+      return [...state, ...action.payload.data]
     case QueryActions.SEARCH_SUCCESS:
-      return [...action.payload]
+      return [...action.payload.data]
     default:
       return state
   }
