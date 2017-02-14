@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import Profile from '../components/profile'
 
 let mapStateToProps = (state) => {
-  console.log('Profile / Mapping...')
+  // console.log('Profile / Mapping...')
 
   let selected_id = state.selected
   let selected_account = null
@@ -11,13 +11,13 @@ let mapStateToProps = (state) => {
 
   for (let account of state.accounts) {
     if (account.id === selected_id) {
-      console.log('Found: @' + account.username)
+      // console.log('Found: @' + account.username)
       selected_account = account
     }
   }
 
   if (selected_account == null) {
-    console.log('Mapping default account to Profile')
+    // console.log('Mapping default account to Profile')
     selected_account = {
       profile_picture: 'https://scontent.cdninstagram.com/t51.2885-19/s150x150/15803612_366597850385743_5436120968172929024_a.jpg',
       full_name: 'Louise Roe',
