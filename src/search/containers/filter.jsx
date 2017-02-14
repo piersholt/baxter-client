@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
 import Filter from '../components/filter'
 import { newSearch } from '../actions'
+import { showFilter } from '../actions'
 
 let mapStateToProps = (state) => {
   return {
@@ -23,8 +24,11 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
   return {
-    paginateSearch: (parameters) => {
+    newSearch: (parameters) => {
       dispatch(newSearch(parameters));
+    },
+    showFilter: (bool) => {
+      dispatch(showFilter(bool));
     }
   }
 };

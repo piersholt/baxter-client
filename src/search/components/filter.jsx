@@ -174,8 +174,8 @@ class Filter extends React.Component {
                   onChange={this.handleInputChange} />
               </label>
             </fieldset>
-            <button className="pull-right" onClick={() => this.props.paginateSearch(this.parameters())} type="button">Cancel</button>
             <button className="pull-right" onClick={() => this.props.paginateSearch(this.parameters())} type="button">Find Influencers</button>
+            <button className="pull-right" onClick={() => this.props.showFilter(false)} type="button">Cancel</button>
           </form>
         </div>
       </div>
