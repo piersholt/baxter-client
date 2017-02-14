@@ -7,7 +7,9 @@ let initialState = {
   search_parameters:
   {
     segment: {},
-    origin: {}
+    origin: {},
+    minFollowers: 0,
+    maxFollowers: 0
   }
 }
 
