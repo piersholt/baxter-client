@@ -15,8 +15,8 @@ class Filter extends React.Component {
       originQLD: (this.props.originQLD),
       originSA:(this.props.originSA),
       originWA:(this.props.originWA),
-      minFollowers: 50,
-      maxFollowers: 100
+      minFollowers: this.props.minFollowers,
+      maxFollowers: this.props.maxFollowers
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
