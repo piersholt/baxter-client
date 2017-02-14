@@ -4,17 +4,17 @@ class Filter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      segmentFashion: (this.props.segmentFashion === undefined ? false : true),
-      segmentBeauty: (this.props.segmentBeauty === undefined ? false : true),
-      segmentLifestyle: (this.props.segmentLifestyle === undefined ? false : true),
-      segmentFood: (this.props.segmentFood === undefined ? false : true),
-      segmentHealth: (this.props.segmentHealth === undefined ? false : true),
-      segmentFitness: (this.props.segmentFitness === undefined ? false : true),
-      originVIC: (this.props.originVIC === undefined ? false : true),
-      originNSW: (this.props.originNSW === undefined ? false : true),
-      originQLD: (this.props.originQLD === undefined ? false : true),
-      originSA:(this.props.originSA === undefined ? false : true),
-      originWA:(this.props.originWA === undefined ? false : true),
+      segmentFashion: (this.props.segmentFashion),
+      segmentBeauty: (this.props.segmentBeauty),
+      segmentLifestyle: (this.props.segmentLifestyle),
+      segmentFood: (this.props.segmentFood),
+      segmentHealth: (this.props.segmentHealth),
+      segmentFitness: (this.props.segmentFitness),
+      originVIC: (this.props.originVIC),
+      originNSW: (this.props.originNSW),
+      originQLD: (this.props.originQLD),
+      originSA:(this.props.originSA),
+      originWA:(this.props.originWA),
       minFollowers: 50,
       maxFollowers: 100
     };
@@ -174,7 +174,8 @@ class Filter extends React.Component {
                   onChange={this.handleInputChange} />
               </label>
             </fieldset>
-            <button className="pull-right" onClick={() => this.props.paginateSearch(this.parameters())} type="button">Search</button>
+            <button className="pull-right" onClick={() => this.props.paginateSearch(this.parameters())} type="button">Cancel</button>
+            <button className="pull-right" onClick={() => this.props.paginateSearch(this.parameters())} type="button">Find Influencers</button>
           </form>
         </div>
       </div>

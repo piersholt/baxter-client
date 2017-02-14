@@ -10,6 +10,17 @@ function selected(state = false, action) {
   }
 }
 
+function showFilter(state = false, action) {
+  switch (action.type) {
+    case InterfaceActions.SHOW_FILTER:
+      return action.showFilter
+    case QueryActions.SEARCH_SUCCESS:
+      return action.meta.showFilter
+    default:
+      return state
+  }
+}
+
 function search_parameters(state = {}, action) {
   switch (action.type) {
     case QueryActions.SEARCH_SUCCESS:
@@ -42,7 +53,8 @@ function searchReducer(state = { selected: 123 }, action) {
   return {
     selected: selected(state.selected, action),
     accounts: foo(state.accounts, action),
-    search_parameters: search_parameters(state.search_parameters, action)
+    search_parameters: search_parameters(state.search_parameters, action),
+    showFilter: showFilter(state.showFilter, action)
   }
 }
 

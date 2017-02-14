@@ -3,6 +3,7 @@ import { apiMiddleware } from 'redux-api-middleware';
 import searchReducer from './search/reducers'
 
 let initialState = {
+  showFilter: true,
   search_parameters:
   {
     segment: {},

@@ -8,12 +8,9 @@ import { FilterContainer } from '../containers/filter'
 import { OverviewContainer } from '../containers/overview'
 
 class Search extends Component {
-  render() {
-    return (
-      <div id="Search">
-        { /** Search Filter **/ }
-        <FilterContainer />
-        { /** Search Overview, Results + Profile **/ }
+  showResults() {
+    if (this.props.showResults === true) {
+      return (
         <div className="row">
           <div className="col-md-9" id="SearchFilterResults">
             { /** Search Overview **/ }
@@ -34,6 +31,24 @@ class Search extends Component {
             <ProfileContainer />
           </div>
         </div>
+      )
+    }
+  }
+
+  showFilter() {
+    if (this.props.showFilter === true) {
+      return (
+        /** Search Filter **/
+        <FilterContainer />
+      )
+    }
+  }
+
+  render() {
+    return (
+      <div id="Search">
+        { this.showFilter() }
+        { this.showResults() }
       </div>
     );
   }
