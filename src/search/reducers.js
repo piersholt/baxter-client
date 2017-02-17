@@ -1,7 +1,8 @@
 import { InterfaceActions } from './actions'
 import { QueryActions } from './actions'
+import {combineReducers } from 'redux'
 
-function selected(state = false, action) {
+const selected = (state = false, action) => {
   switch (action.type) {
     case InterfaceActions.SELECT_ACCOUNT:
       return action.account_id
@@ -10,7 +11,7 @@ function selected(state = false, action) {
   }
 }
 
-function showFilter(state = false, action) {
+const showFilter = (state = false, action) => {
   switch (action.type) {
     case InterfaceActions.SHOW_FILTER:
       return action.showFilter
@@ -21,7 +22,7 @@ function showFilter(state = false, action) {
   }
 }
 
-function search_parameters(state = {}, action) {
+const search_parameters = (state = {}, action) => {
   switch (action.type) {
     case QueryActions.SEARCH_SUCCESS:
       return Object.assign({}, state, action.meta.parameters)
@@ -32,7 +33,7 @@ function search_parameters(state = {}, action) {
   }
 }
 
-function foo(state = [], action) {
+const accounts = (state = [], action) => {
   switch (action.type) {
     // Interface
     case InterfaceActions.ADD_ACCOUNT:
@@ -49,13 +50,11 @@ function foo(state = [], action) {
   }
 }
 
-function searchReducer(state = { selected: 123 }, action) {
-  return {
-    selected: selected(state.selected, action),
-    accounts: foo(state.accounts, action),
-    search_parameters: search_parameters(state.search_parameters, action),
-    showFilter: showFilter(state.showFilter, action)
-  }
-}
+const searchReducer = combineReducers({
+  accounts,
+  search_parameters,
+  selected,
+  showFilter
+})
 
 export default searchReducer;
