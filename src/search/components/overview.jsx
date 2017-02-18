@@ -6,7 +6,7 @@ class Overview extends React.Component {
       <div>
 
         { this.props.segments }
-        <button className="pull-right" onClick={() => this.props.showFilter(true)} type="button">Show Filters</button>
+        <button className="btn-rounded pull-right" onClick={() => this.props.showFilter(true)} type="button">Show Filters</button>
       </div>
 
     )

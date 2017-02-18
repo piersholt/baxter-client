@@ -58,7 +58,7 @@ class Filter extends React.Component {
   render() {
     return (
       <div className="row">
-        <div className="col-md-12" id="SearchFilterResults">
+        <div className="col-md-12">
           <form>
             {/*  SEGMENT */}
             <fieldset className="segment">
@@ -174,8 +174,8 @@ class Filter extends React.Component {
                   onChange={this.handleInputChange} />
               </label>
             </fieldset>
-            <button className="pull-right" onClick={() => this.props.showFilter(false)} type="button">Cancel</button>
-            <button className="pull-right" onClick={() => this.props.newSearch(this.parameters())} type="button">Find Influencers</button>
+            <button className="btn-rounded pull-right" onClick={() => this.props.showFilter(false)} type="button">Cancel</button>
+            <button className="btn-rounded pull-right" onClick={() => this.props.newSearch(this.parameters())} type="button">Find Influencers</button>
           </form>
         </div>
       </div>

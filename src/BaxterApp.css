@@ -1,24 +1,221 @@
-.App {
-  text-align: center;
+body, html {
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+@media (min-width: 768px){
+  #SearchFilterResults {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: scroll;
+  }
+
+  #SearchProfile {
+    width: 400px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    overflow-y: scroll;
+  }
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+#SearchFilterResults {
+  height: 100%;
+  padding-top: 88px;
+  padding-left: 0px;
+  padding-right: 400px;
+  right: 0;
 }
 
-.App-intro {
-  font-size: large;
+#SearchResults {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+#SearchProfile {
+  height: 100%;
+  padding-top: 88px;
+  padding-left: 34px;
+  padding-right: 34px;
+  background-color: #F8F9FA;
+}
+
+#SearchOverview {
+  padding-top: 6px;
+  padding-right: 24px;
+}
+
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-family: Circular-Book;
+  font-size: 14px;
+  color: #FF3B30 !important;
+  letter-spacing: 0;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FF3B30;
+  letter-spacing: 0;
+  text-decoration: none !important;
+}
+
+.btn-rounded {
+  font-family: Circular-Medium;
+  font-size: 15px !important;
+  color: #FFFFFF !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  background-color: #FF4C42;
+  height: 36px;
+  min-width: 100px;
+  border-radius: 18px !important;
+  border: none;
+}
+
+.btn-rounded:hover {
+  background: #FF5D54;
+}
+
+.btn-rounded:focus {
+  outline: 0;
+}
+
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.navbar-inverse {
+  height: 72px;
+  background-color: #282828;
+}
+
+#Search {
+  padding-top: 72px;
+}
+
+#fixed-view {
+  position: fixed;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+  vertical-align: middle !important;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #F8F9FA;
+}
+
+td {
+  font-family: Circular-Book;
+  font-size: 12px;
+  color: #8D8F94;
+  line-height: 18px;
+  overflow: hidden;
+  border-bottom: 2px solid transparent;
+}
+
+th {
+  font-family: Circular-Book;
+  font-weight: normal;
+  font-size: 12px;
+  color: #8D8F94;
+}
+
+tr {
+  height: 100px;
+  -webkit-box-shadow: 0px 25px 0px -24px rgba(231,234,243,1);
+  -moz-box-shadow: 0px 25px 0px -24px rgba(231,234,243,1);
+  box-shadow: 0px 25px 0px -24px rgba(231,234,243,1);
+}
+
+.result-metric {
+  font-family: Circular-Book;
+  font-size: 18px;
+  color: #333333;
+  width: 8%;
+}
+
+.result-profile-image{
+  margin-left: 16px;
+  border-radius: 50%;
+}
+
+.profile-picture {
+  width: 98px;
+}
+
+.full-name {
+  font-family: Circular-Book;
+  font-size: 20px;
+  color: #000000;
+}
+
+#bio {
+  font-family: Circular-Book;
+  font-size: 14px;
+  color: #333333;
+}
+
+#full_name {
+  font-family: Circular-Book;
+  font-size: 24px;
+  color: #000000;
+  padding-top: 14px;
+}
+
+#origin, #segment {
+  font-family: Circular-Book;
+  font-size: 14px;
+  color: #8D8F94;
+  letter-spacing: 0;
+}
+
+#origin {
+  padding-top: 12px;
+}
+
+#posts {
+  margin-top: 20px;
+}
+
+.profile-counts {
+  font-family: Circular-Book;
+  font-size: 16px;
+  color: #333333;
+  width: 200px;
+  margin-top: 12px;
+  padding-left: 12px;
+}
+
+.profile-counts-label {
+  font-size: 12px;
+  color: #8D8F94;
+}
+
+.profile-actions {
+  padding-left: 10px;
+  padding-top: 6px;
+}
+
+.post-image {
+  padding: 1px;
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }

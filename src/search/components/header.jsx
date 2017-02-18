@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class Header extends Component {
   render() {
     return (
-      <header className="navbar navbar-inverse">
+      <header className="navbar navbar-inverse navbar-fixed-top">
         <div className="container">
           <div className="navbar-header">
             <a className="navbar-brand" href="#">Baxter</a>

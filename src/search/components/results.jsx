@@ -11,7 +11,7 @@ class Results extends React.Component {
         food: (this.props.search_parameters.segment.food),
         health: (this.props.search_parameters.segment.health),
         fitness: (this.props.search_parameters.segment.fitness),
-      }, 
+      },
       origin: {
         VIC: (this.props.search_parameters.origin.VIC),
         NSW: (this.props.search_parameters.origin.NSW),
@@ -44,19 +44,10 @@ class Results extends React.Component {
     // console.log('Results / Rendering / Accounts (outside loop): ' + accounts)
 
     return (
-      <table className="table table-hover">
-        <thead>
-          <tr>
-            <th></th>
-            <th></th>
-            <th>Followers</th>
-            <th>AEPP</th>
-            <th>AER</th>
-          </tr>
-        </thead>
+      <table className="table table-fixed table-hover">
         <tbody>
           { accounts }
-          <tr><button className="pull-right" onClick={() => this.props.paginateSearch(this.parameters())} type="button">Load More</button></tr>
+          <tr><button className="btn-rounded pull-right" onClick={() => this.props.paginateSearch(this.parameters())} type="button">Load More</button></tr>
         </tbody>
       </table> )
   }

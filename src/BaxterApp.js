@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <div id="layout">
         <Header />
-        <div className="container">
+        <div className="container-fluid">
           <SearchContainer />
         </div>
       </div>
