@@ -7,30 +7,29 @@ import { Provider } from 'react-redux';
 import store from './store';
 import { configure } from "redux-auth";
 import { AuthGlobals } from "redux-auth/bootstrap-theme";
-import { EmailSignInForm } from "redux-auth/bootstrap-theme";
 
 // Components
 import Header from './search/components/header';
 
-import { SearchContainer } from './search/containers/search';
-
-class App extends Component {
+class BaxterApp extends Component {
   render() {
     return (
-      <div id="layout">
-        <AuthGlobals />
-        <Header />
-        <div className="container">
-          <EmailSignInForm />
-          <SearchContainer />
+      <Provider store={store}>
+        <div id="layout">
+          <AuthGlobals />
+          <Header />
+          <div className="container">
+            <div id="app">
+              {/* <EmailSignInForm />
+              <SearchContainer /> */}
+              { this.props.children }
+            </div>
+          </div>
         </div>
-      </div>
+      </Provider>
     );
   }
 }
-
-const BaxterApp = () => ( <Provider store={store}><App /></Provider> )
-
 
 export default BaxterApp;
 
