@@ -1,6 +1,7 @@
 import { InterfaceActions } from './actions'
 import { QueryActions } from './actions'
 import {combineReducers } from 'redux'
+import {authStateReducer} from "redux-auth"
 
 const selected = (state = false, action) => {
   switch (action.type) {
@@ -51,6 +52,7 @@ const accounts = (state = [], action) => {
 }
 
 const searchReducer = combineReducers({
+  auth: authStateReducer,
   accounts,
   search_parameters,
   selected,
