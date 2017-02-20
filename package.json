@@ -15,7 +15,8 @@
     "react-redux": "^5.0.2",
     "redux": "^3.6.0",
     "redux-api-middleware": "^1.0.2",
-    "redux-auth": "0.0.5-beta5"
+    "redux-auth": "0.0.5-beta5",
+    "redux-thunk": "^2.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
