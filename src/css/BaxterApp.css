@@ -47,7 +47,8 @@ body, html {
 
 #SearchOverview {
   padding-top: 6px;
-  padding-right: 24px;
+  padding-right: 36px;
+  padding-bottom: 22px;
 }
 
 * {
@@ -91,6 +92,73 @@ a:hover {
   outline: 0;
 }
 
+.btn-outline {
+  font-family: Circular-Book;
+  font-size: 15px !important;
+  color: #FF3B30 !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  background-color: transparent;
+  height: 36px;
+  min-width: 100px;
+  border-radius: 18px !important;
+  border: 1px solid #FF4C42;
+}
+
+.btn-outline:hover {
+  font-family: Circular-Medium;
+  color: #FFFFFF !important;
+  background: #FF5D54;
+  border: 1px solid #FF5D54;
+  letter-spacing: -0.15px;
+}
+
+.btn-outline:focus {
+  outline: 0;
+}
+
+.btn-rounded-jumbo {
+  font-family: Circular-Medium;
+  font-size: 19px !important;
+  color: #FFFFFF !important;
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+  background-color: #FF4C42;
+  height: 48px;
+  min-width: 200px;
+  border-radius: 24px !important;
+  border: none;
+}
+
+.btn-rounded-jumbo:hover {
+  background: #FF5D54;
+}
+
+.btn-rounded-jumbo:focus {
+  outline: 0;
+}
+
+.btn-cancel {
+  font-family: Circular-Book;
+  font-size: 19px !important;
+  color: #575757 !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  margin-left: 8px;
+  margin-right: 8px;
+  background-color: transparent;
+  height: 48px;
+  min-width: 100px;
+  border: none;
+}
+
+.btn-cancel:hover {
+}
+
+.btn-cancel:focus {
+  outline: 0;
+}
+
 .nopadding {
   padding: 0 !important;
   margin: 0 !important;
@@ -98,7 +166,8 @@ a:hover {
 
 .navbar-inverse {
   height: 72px;
-  background-color: #282828;
+  background-color: #282828 !important;
+  background-image: none !important;
 }
 
 #Search {
@@ -218,4 +287,63 @@ tr {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.filter-form {
+  font-family: Circular-Book;
+  font-size: 19px;
+  color: #575757;
+}
+
+.label-primary {
+  font-family: Circular-Book;
+  font-size: 29px;
+  color: #575757;
+}
+
+.filter-forms {
+  margin-top: 16px;
+  margin-left: 80px !important;
+  margin-right: 80px !important;
+}
+
+.filter-header {
+  font-family: Circular-Medium;
+  font-size: 20px;
+  color: #333333;
+  padding-bottom: 24px;
+}
+
+.filter-buttons {
+  margin-bottom: 24px;
+}
+
+.filter-checkbox {
+  margin-left: -24px !important;
+}
+
+.filter-label {
+  font-family: Circular-Book;
+  font-weight: 300;
+  font-size: 19px;
+  color: #575757;
+  line-height: 20px;
+  min-width: 320px;
+  padding-bottom: 16px;
+}
+
+.input-followers {
+}
+
+hr {
+  margin-top: 20px !important;
+  margin-bottom: 28px !important;
+}
+
+.search-overview {
+  font-family: Circular-Book;
+  font-size: 17px;
+  color: #8D8F94;
+  padding-left: 24px;
+  padding-top: 6px;
 }

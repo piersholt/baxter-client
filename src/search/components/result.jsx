@@ -25,6 +25,9 @@ class Result extends React.Component {
           { this.props.account.counts.followers }
         </td>
         <td className="result-metric">
+          { this.props.account.counts.followers/10 }
+        </td>
+        <td className="result-metric">
           { 100 }
         </td>
         <td className="result-metric">

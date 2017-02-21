@@ -5,7 +5,7 @@ class Header extends Component {
   render() {
     return (
       <header className="navbar navbar-inverse navbar-fixed-top">
-        <div className="container">
+        <div className="container-fluid">
           <div className="navbar-header">
             <a className="navbar-brand" href="#">Baxter</a>
           </div>
