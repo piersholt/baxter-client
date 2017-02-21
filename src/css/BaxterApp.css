@@ -347,3 +347,13 @@ hr {
   padding-left: 24px;
   padding-top: 6px;
 }
+
+.navbar-brand {
+  margin-top: 14px;
+  margin-left: 0px !important;
+}
+
+.navbar-brand img {
+  height: 14px;
+  width: 84px;
+}

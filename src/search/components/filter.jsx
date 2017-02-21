@@ -68,7 +68,6 @@ class Filter extends React.Component {
 
             {/*  SEGMENT */}
             <fieldset className="segment">
-              <div class="form-group">
                 <div className="filter-header">Categories</div>
 
                   <div className="col-md-4">
@@ -136,16 +135,13 @@ class Filter extends React.Component {
                       id="segmentFitness"/>
                     <label htmlFor="segmentFitness" className="filter-label">Fitness</label>
                   </div>
-              </div>
             </fieldset>
 
             <hr />
 
             {/*  ORIGIN */}
             <fieldset className="segment">
-              <div class="form-group">
                 <div className="filter-header">Locations</div>
-
                   <div className="col-md-4">
                     <input
                       name="originNSW"
@@ -200,8 +196,6 @@ class Filter extends React.Component {
                       id="originWA"/>
                     <label htmlFor="originWA" className="filter-label">Western Australia</label>
                   </div>
-
-              </div>
             </fieldset>
 
             <hr />
