@@ -350,7 +350,7 @@ hr {
 
 .navbar-brand {
   margin-top: 14px;
-  margin-left: 0px !important;
+  margin-left: -4px !important;
 }
 
 .navbar-brand img {
