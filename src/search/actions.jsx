@@ -59,7 +59,7 @@ export function newSearch(parameters) {
     [CALL_API]: {
       endpoint: 'http://localhost:3100/api/accounts.json'.concat('?' + url_parameters),
       method: 'GET',
-      types: [QueryActions.SEARCH_REQUEST, { type: QueryActions.SEARCH_SUCCESS, meta: { parameters: parameters, showFilter: false} }, 'FAILURE']
+      types: [{ type: QueryActions.SEARCH_REQUEST, meta: { showFilter: false} }, { type: QueryActions.SEARCH_SUCCESS, meta: { parameters: parameters, showFilter: false} }, 'FAILURE']
     }
   }
 }

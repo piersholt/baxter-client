@@ -18,6 +18,8 @@ const showFilter = (state = false, action) => {
       return action.showFilter
     case QueryActions.SEARCH_SUCCESS:
       return action.meta.showFilter
+    case QueryActions.SEARCH_REQUEST:
+      return action.meta.showFilter
     default:
       return state
   }
