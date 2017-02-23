@@ -14,24 +14,28 @@ class Search extends Component {
 
         <div className="container">
           <div className="row">
-            <div className="col-md-12" id="SearchFilterResults">
+
+            <div className="col-md-9" id="SearchFilterResults">
+              { this.showFilter() }
 
               { /** Search Overview **/ }
-              { this.showFilter() }
-              <div className="col-md-12" id="SearchOverview">
-                <OverviewContainer />
+              <div className="row">
+                <div className="col-md-12" id="SearchOverview">
+                  <OverviewContainer />
+                </div>
               </div>
 
               { /** Search Results **/ }
-              <div className="col-md-12" id="SearchResults">
-                <ResultsContainer accounts={{}}/>
+              <div className="row">
+                <div className="col-md-12" id="SearchResults">
+                  <ResultsContainer accounts={{}}/>
+                </div>
               </div>
 
-              { /** Selected Profile **/ }
-              <div className="col-md-3" id="SearchProfile">
-                <ProfileContainer />
-              </div>
-
+            </div>
+            { /** Selected Profile **/ }
+            <div className="col-md-3" id="SearchProfile">
+              <ProfileContainer />
             </div>
           </div>
         </div>
