@@ -53,7 +53,7 @@ class Profile extends React.Component {
         </div>
 
         <div className='row'>
-          <div id='website'><a href={this.props.website}>{this.props.website}</a></div>
+          <div id='website'><a href={this.props.website} target="_blank">{this.props.website}</a></div>
         </div>
 
         <div className='row'>
