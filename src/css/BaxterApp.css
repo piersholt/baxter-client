@@ -4,51 +4,46 @@ body, html {
   height: 100%;
 }
 
-@media (min-width: 768px){
-  #SearchFilterResults {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    overflow-y: scroll;
-  }
-
-  #SearchProfile {
-    width: 400px;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    overflow-y: scroll;
-  }
-}
-
 #SearchFilterResults {
   height: 100%;
-  padding-top: 88px;
+  padding-top: 72px;
   padding-left: 0px;
   padding-right: 400px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
   right: 0;
+}
+
+#SearchOverview {
+  height: 78px;
+  padding-right: 24px;
 }
 
 #SearchResults {
   padding-left: 0px;
   padding-right: 0px;
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
 }
 
 #SearchProfile {
+  width: 400px;
   height: 100%;
   padding-top: 88px;
   padding-left: 34px;
   padding-right: 34px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  overflow-y: scroll;
   background-color: #F8F9FA;
-}
-
-#SearchOverview {
-  padding-top: 6px;
-  padding-right: 36px;
-  padding-bottom: 22px;
 }
 
 * {
@@ -302,7 +297,7 @@ tr {
 }
 
 .filter-forms {
-  margin-top: 16px;
+  margin-top: 24px;
   margin-left: 80px !important;
   margin-right: 80px !important;
 }

@@ -45,6 +45,15 @@ class Results extends React.Component {
 
     return (
       <table className="table table-fixed table-hover">
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th>Followers</th>
+            <th>AEPP</th>
+            <th>AER</th>
+          </tr>
+        </thead>
         <tbody>
           { accounts }
           <tr><button className="btn-rounded pull-right" onClick={() => this.props.paginateSearch(this.parameters())} type="button">Load More</button></tr>

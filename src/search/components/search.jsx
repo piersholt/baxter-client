@@ -12,29 +12,29 @@ class Search extends Component {
     if (true === true) {
       return (
 
+        <div className="container">
           <div className="row">
             <div className="col-md-12" id="SearchFilterResults">
+
               { /** Search Overview **/ }
               { this.showFilter() }
-              <div className="row">
-                <div className="col-md-12" id="SearchOverview">
-                  <OverviewContainer />
-                </div>
+              <div className="col-md-12" id="SearchOverview">
+                <OverviewContainer />
               </div>
 
               { /** Search Results **/ }
-              <div className="row nopadding">
-                <div className="col-md-12" id="SearchResults">
-                  <ResultsContainer accounts={{}}/>
-                </div>
+              <div className="col-md-12" id="SearchResults">
+                <ResultsContainer accounts={{}}/>
               </div>
-            </div>
 
-            { /** Selected Profile **/ }
-            <div className="col-md-3" id="SearchProfile">
-              <ProfileContainer />
+              { /** Selected Profile **/ }
+              <div className="col-md-3" id="SearchProfile">
+                <ProfileContainer />
+              </div>
+
             </div>
           </div>
+        </div>
       )
     }
   }
