@@ -57,9 +57,9 @@ export function newSearch(parameters) {
   let url_parameters = param(parameters)
   return {
     [CALL_API]: {
-      endpoint: 'http://localhost:3100/api/dev.json'.concat('?' + url_parameters),
+      endpoint: 'http://localhost:3100/api/accounts.json'.concat('?' + url_parameters),
       method: 'GET',
-      types: [QueryActions.SEARCH_REQUEST, { type: QueryActions.SEARCH_SUCCESS, meta: { parameters: parameters, showFilter: false} }, 'FAILURE']
+      types: [QueryActions.SEARCH_REQUEST, { type: QueryActions.SEARCH_SUCCESS, meta: { parameters: parameters, showFilter: true} }, 'FAILURE']
     }
   }
 }
@@ -72,7 +72,7 @@ export function paginateSearch(parameters) {
 
   return {
     [CALL_API]: {
-      endpoint: 'http://localhost:3100/api/dev.json'.concat('?' + url_parameters),
+      endpoint: 'http://localhost:3100/api/accounts.json'.concat('?' + url_parameters),
       method: 'GET',
       types: [QueryActions.PAGINATE_REQUEST, { type: QueryActions.PAGINATE_SUCCESS, meta: { parameters: parameters} }, 'FAILURE']
     }
