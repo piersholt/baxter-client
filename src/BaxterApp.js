@@ -1,5 +1,6 @@
 import './css/BaxterApp.css';
 import './css/magic-check.css';
+import '../public/fonts/font-face.css';
 
 // Core
 import React, { Component } from 'react';

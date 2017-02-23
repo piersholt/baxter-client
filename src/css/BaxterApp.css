@@ -53,7 +53,8 @@ body, html {
 }
 
 a {
-  font-family: Circular-Book;
+  font-family: Circular;
+  font-weight: normal;
   font-size: 14px;
   color: #FF3B30 !important;
   letter-spacing: 0;
@@ -67,7 +68,8 @@ a:hover {
 }
 
 .btn-rounded {
-  font-family: Circular-Medium;
+  font-family: Circular;
+  font-weight: normal;
   font-size: 15px !important;
   color: #FFFFFF !important;
   padding-left: 24px !important;
@@ -88,7 +90,8 @@ a:hover {
 }
 
 .btn-outline {
-  font-family: Circular-Book;
+  font-family: Circular;
+  font-weight: normal;
   font-size: 15px !important;
   color: #FF3B30 !important;
   padding-left: 24px !important;
@@ -101,7 +104,8 @@ a:hover {
 }
 
 .btn-outline:hover {
-  font-family: Circular-Medium;
+  font-family: Circular;
+  font-weight: 500;
   color: #FFFFFF !important;
   background: #FF5D54;
   border: 1px solid #FF5D54;
@@ -113,7 +117,8 @@ a:hover {
 }
 
 .btn-rounded-jumbo {
-  font-family: Circular-Medium;
+  font-family: Circular;
+  font-weight: 500;
   font-size: 19px !important;
   color: #FFFFFF !important;
   padding-left: 32px !important;
@@ -134,7 +139,8 @@ a:hover {
 }
 
 .btn-cancel {
-  font-family: Circular-Book;
+  font-family: Circular;
+  font-weight: normal;
   font-size: 19px !important;
   color: #575757 !important;
   padding-left: 24px !important;
@@ -182,7 +188,8 @@ a:hover {
 }
 
 td {
-  font-family: Circular-Book;
+  font-family: Circular;
+  font-weight: normal;
   font-size: 12px;
   color: #8D8F94;
   line-height: 18px;
@@ -191,7 +198,7 @@ td {
 }
 
 th {
-  font-family: Circular-Book;
+  font-family: Circular;
   font-weight: normal;
   font-size: 12px;
   color: #8D8F94;
@@ -205,7 +212,8 @@ tr {
 }
 
 .result-metric {
-  font-family: Circular-Book;
+  font-family: Circular;
+  font-weight: normal;
   font-size: 18px;
   color: #333333;
   width: 8%;
@@ -221,26 +229,30 @@ tr {
 }
 
 .full-name {
-  font-family: Circular-Book;
+  font-family: Circular;
+  font-weight: normal;
   font-size: 20px;
   color: #000000;
 }
 
 #bio {
-  font-family: Circular-Book;
+  font-family: Circular;
+  font-weight: normal;
   font-size: 14px;
   color: #333333;
 }
 
 #full_name {
-  font-family: Circular-Book;
+  font-family: Circular;
+  font-weight: normal;
   font-size: 24px;
   color: #000000;
   padding-top: 14px;
 }
 
 #origin, #segment {
-  font-family: Circular-Book;
+  font-family: Circular;
+  font-weight: normal;
   font-size: 14px;
   color: #8D8F94;
   letter-spacing: 0;
@@ -255,7 +267,8 @@ tr {
 }
 
 .profile-counts {
-  font-family: Circular-Book;
+  font-family: Circular;
+  font-weight: normal;
   font-size: 16px;
   color: #333333;
   width: 200px;
@@ -285,13 +298,15 @@ tr {
 }
 
 .filter-form {
-  font-family: Circular-Book;
+  font-family: Circular;
+  font-weight: normal;
   font-size: 19px;
   color: #575757;
 }
 
 .label-primary {
-  font-family: Circular-Book;
+  font-family: Circular;
+  font-weight: normal;
   font-size: 29px;
   color: #575757;
 }
@@ -303,7 +318,8 @@ tr {
 }
 
 .filter-header {
-  font-family: Circular-Medium;
+  font-family: Circular;
+  font-weight: 500;
   font-size: 20px;
   color: #333333;
   padding-bottom: 24px;
@@ -318,8 +334,8 @@ tr {
 }
 
 .filter-label {
-  font-family: Circular-Book;
-  font-weight: 300;
+  font-family: Circular;
+  font-weight: normal;
   font-size: 19px;
   color: #575757;
   line-height: 20px;
@@ -336,7 +352,8 @@ hr {
 }
 
 .search-overview {
-  font-family: Circular-Book;
+  font-family: Circular;
+  font-weight: normal;
   font-size: 17px;
   color: #8D8F94;
   padding-left: 24px;
