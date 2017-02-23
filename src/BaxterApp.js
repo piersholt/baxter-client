@@ -1,4 +1,5 @@
-import './BaxterApp.css';
+import './css/BaxterApp.css';
+import './css/magic-check.css';
 
 // Core
 import React, { Component } from 'react';

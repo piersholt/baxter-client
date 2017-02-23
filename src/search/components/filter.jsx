@@ -58,124 +58,187 @@ class Filter extends React.Component {
   render() {
     return (
       <div className="row">
-        <div className="col-md-12" id="SearchFilterResults">
-          <form>
+        <div className="col-md-12">
+          <form className="filter-forms">
+
+            <div className="row filter-buttons">
+              <button className="btn-rounded-jumbo pull-right" onClick={() => this.props.newSearch(this.parameters())} type="button">Find Influencers</button>
+              <button className="btn-cancel pull-right" onClick={() => this.props.showFilter(false)} type="button">Cancel</button>
+            </div>
+
             {/*  SEGMENT */}
             <fieldset className="segment">
-              <label>
-                Fashion:
-                <input
-                  name="segmentFashion"
-                  type="checkbox"
-                  checked={this.state.segmentFashion}
-                  onChange={this.handleInputChange} />
-              </label>
-              <label>
-                Beauty:
-                <input
-                  name="segmentBeauty"
-                  type="checkbox"
-                  checked={this.state.segmentBeauty}
-                  onChange={this.handleInputChange} />
-              </label>
-              <label>
-                Lifestyle:
-                <input
-                  name="segmentLifestyle"
-                  type="checkbox"
-                  checked={this.state.segmentLifestyle}
-                  onChange={this.handleInputChange} />
-              </label>
-              <label>
-                Foodie:
-                <input
-                  name="segmentFood"
-                  type="checkbox"
-                  checked={this.state.segmentFood}
-                  onChange={this.handleInputChange} />
-              </label>
-              <label>
-                Health:
-                <input
-                  name="segmentHealth"
-                  type="checkbox"
-                  checked={this.state.segmentHealth}
-                  onChange={this.handleInputChange} />
-              </label>
-              <label>
-                Fitness:
-                <input
-                  name="segmentFitness"
-                  type="checkbox"
-                  checked={this.state.segmentFitness}
-                  onChange={this.handleInputChange} />
-              </label>
+                <div className="filter-header">Categories</div>
+
+                  <div className="col-md-4">
+                    <input
+                      name="segmentFashion"
+                      type="checkbox"
+                      checked={this.state.segmentFashion}
+                      onChange={this.handleInputChange}
+                      className="magic-checkbox"
+                      id="segmentFashion"/>
+                    <label htmlFor="segmentFashion" className="filter-label">Fashion</label>
+                  </div>
+
+                  <div className="col-md-4">
+                    <input
+                      name="segmentBeauty"
+                      type="checkbox"
+                      checked={this.state.segmentBeauty}
+                      onChange={this.handleInputChange}
+                      className="magic-checkbox"
+                      id="segmentBeauty"/>
+                    <label htmlFor="segmentBeauty" className="filter-label">Beauty</label>
+                  </div>
+
+                  <div className="col-md-4">
+                    <input
+                      name="segmentLifestyle"
+                      type="checkbox"
+                      checked={this.state.segmentLifestyle}
+                      onChange={this.handleInputChange}
+                      className="magic-checkbox"
+                      id="segmentLifestyle"/>
+                    <label htmlFor="segmentLifestyle" className="filter-label">Lifestyle</label>
+                  </div>
+
+                  <div className="col-md-4">
+                    <input
+                      name="segmentFood"
+                      type="checkbox"
+                      checked={this.state.segmentFoodie}
+                      onChange={this.handleInputChange}
+                      className="magic-checkbox"
+                      id="segmentFood"/>
+                    <label htmlFor="segmentFood" className="filter-label">Food</label>
+                  </div>
+
+                  <div className="col-md-4">
+                    <input
+                      name="segmentHealth"
+                      type="checkbox"
+                      checked={this.state.segmentHealth}
+                      onChange={this.handleInputChange}
+                      className="magic-checkbox"
+                      id="segmentHealth"/>
+                    <label htmlFor="segmentHealth" className="filter-label">Health</label>
+                  </div>
+
+                  <div className="col-md-4">
+                    <input
+                      name="segmentFitness"
+                      type="checkbox"
+                      checked={this.state.segmentFitness}
+                      onChange={this.handleInputChange}
+                      className="magic-checkbox"
+                      id="segmentFitness"/>
+                    <label htmlFor="segmentFitness" className="filter-label">Fitness</label>
+                  </div>
             </fieldset>
-            <br />
+
+            <hr />
+
             {/*  ORIGIN */}
             <fieldset className="segment">
-              <label>
-                Victoria:
-                <input
-                  name="originVIC"
-                  type="checkbox"
-                  checked={this.state.originVIC}
-                  onChange={this.handleInputChange} />
-              </label>
-              <label>
-                New South Wales:
-                <input
-                  name="originNSW"
-                  type="checkbox"
-                  checked={this.state.originNSW}
-                  onChange={this.handleInputChange} />
-              </label>
-              <label>
-                Queensland:
-                <input
-                  name="originQLD"
-                  type="checkbox"
-                  checked={this.state.originQLD}
-                  onChange={this.handleInputChange} />
-              </label>
-              <label>
-                South Australia:
-                <input
-                  name="originSA"
-                  type="checkbox"
-                  checked={this.state.originSA}
-                  onChange={this.handleInputChange} />
-              </label>
-              <label>
-                Western Australia:
-                <input
-                  name="originWA"
-                  type="checkbox"
-                  checked={this.state.originWA}
-                  onChange={this.handleInputChange} />
-              </label>
+                <div className="filter-header">Locations</div>
+                  <div className="col-md-4">
+                    <input
+                      name="originNSW"
+                      type="checkbox"
+                      checked={this.state.originNSW}
+                      onChange={this.handleInputChange}
+                      className="magic-checkbox"
+                      id="originNSW"/>
+                    <label htmlFor="originNSW" className="filter-label">New South Wales</label>
+                  </div>
+
+                  <div className="col-md-4">
+                    <input
+                      name="originVIC"
+                      type="checkbox"
+                      checked={this.state.originVIC}
+                      onChange={this.handleInputChange}
+                      className="magic-checkbox"
+                      id="originVIC"/>
+                    <label htmlFor="originVIC" className="filter-label">Victoria</label>
+                  </div>
+
+                  <div className="col-md-4">
+                    <input
+                      name="originQLD"
+                      type="checkbox"
+                      checked={this.state.originQLD}
+                      onChange={this.handleInputChange}
+                      className="magic-checkbox"
+                      id="originQLD"/>
+                    <label htmlFor="originQLD" className="filter-label">Queensland</label>
+                  </div>
+
+                  <div className="col-md-4">
+                    <input
+                      name="originSA"
+                      type="checkbox"
+                      checked={this.state.originSA}
+                      onChange={this.handleInputChange}
+                      className="magic-checkbox"
+                      id="originSA"/>
+                    <label htmlFor="originSA" className="filter-label">South Australia</label>
+                  </div>
+
+                  <div className="col-md-4">
+                    <input
+                      name="originWA"
+                      type="checkbox"
+                      checked={this.state.originWA}
+                      onChange={this.handleInputChange}
+                      className="magic-checkbox"
+                      id="originWA"/>
+                    <label htmlFor="originWA" className="filter-label">Western Australia</label>
+                  </div>
             </fieldset>
-            <br />
+
+            <hr />
+
+            {/*  FOLLOWERS */}
             <fieldset className="followers">
-              <label>
-                Min followers:
-                <input
+              <div className="filter-header">Followers</div>
+              <div className="col-md-2">
+                <select
                   name="minFollowers"
                   type="number"
                   value={this.state.minFollowers}
-                  onChange={this.handleInputChange} />
-              </label>
-              <label>
-                Max followers:
-                <input
+                  onChange={this.handleInputChange}
+                  className="form-control input-lg input-followers">
+                  <option>5k</option>
+                  <option>10k</option>
+                  <option>25k</option>
+                  <option>50k</option>
+                  <option>100k</option>
+                  <option>250k</option>
+                  <option>500k</option>
+                  <option>1m</option>
+                </select>
+              </div>
+              <div className="col-md-2">
+                <select
                   name="maxFollowers"
                   type="number"
                   value={this.state.maxFollowers}
-                  onChange={this.handleInputChange} />
-              </label>
+                  onChange={this.handleInputChange}
+                  className="form-control input-lg input-followers">
+                  <option>5k</option>
+                  <option>10k</option>
+                  <option>25k</option>
+                  <option>50k</option>
+                  <option>100k</option>
+                  <option>250k</option>
+                  <option>500k</option>
+                  <option>Over 1m</option>
+                </select>
+              </div>
             </fieldset>
-            <button className="pull-right" onClick={() => this.props.showFilter(false)} type="button">Cancel</button>
-            <button className="pull-right" onClick={() => this.props.newSearch(this.parameters())} type="button">Find Influencers</button>
+
           </form>
         </div>
       </div>

@@ -6,7 +6,11 @@ class Profile extends React.Component {
 
     let posts = this.props.posts.map(
       function(object){
-        return <div key={object.id} className="col-md-6"><img width="100" role="presentation" src={object.image.thumbnail} /></div>;
+        return <div key={object.id} className="col-lg-6 col-md-12 nopadding">
+            <div className="post-image">
+              <img width="100%" role="presentation" src={object.image.thumbnail} />
+            </div>
+          </div>;
       }
     )
 
@@ -14,21 +18,28 @@ class Profile extends React.Component {
       <div>
 
         <div className='row'>
-
-          <div className='col-md-3'>
-            <img className='img-circle' role="presentation" src={this.props.profile_picture} width='75' />
+          <div className='col-md-3 nopadding'>
+            <img className='img-circle' role="presentation" src={this.props.profile_picture} width='96' />
           </div>
-
           <div className='col-md-9'>
-            <div className='row'>
-              <div className='col-md-4'></div>
-              <div className='col-md-4'></div>
-              <div className='col-md-4'></div>
+            <div className='row profile-actions'>
+              <div className='col-md-12'>
+                <a href="http://instagram.com/nikkikphillips" className="btn btn-rounded" target="_blank">View Instagram</a>
+              </div>
             </div>
-            <div className='row'>
-              <div className='col-md-4'>{this.props.counts.media}</div>
-              <div className='col-md-4'>{this.props.counts.followers}</div>
-              <div className='col-md-4'>{this.props.counts.following}</div>
+            <div className='row profile-counts'>
+              <div className='col-md-4'>
+                {this.props.counts.media}
+                <div className='profile-counts-label'>Posts</div>
+              </div>
+              <div className='col-md-4'>
+                {this.props.counts.followers}
+                <div className='profile-counts-label'>Followers</div>
+              </div>
+              <div className='col-md-4'>
+                {this.props.counts.following}
+                <div className='profile-counts-label'>Following</div>
+              </div>
             </div>
           </div>
         </div>
@@ -46,7 +57,7 @@ class Profile extends React.Component {
         </div>
 
         <div className='row'>
-          <div id="origin">Victoria, Australia</div>
+          <div id="origin">Victoria, NSW</div>
         </div>
 
         <div className='row'>

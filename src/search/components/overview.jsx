@@ -5,8 +5,8 @@ class Overview extends React.Component {
     return (
       <div>
 
-        { this.props.segments }
-        <button className="pull-right" onClick={() => this.props.showFilter(true)} type="button">Show Filters</button>
+        <div className="search-overview pull-left">{ this.props.segments }</div>
+        <button className="btn-outline pull-right" onClick={() => this.props.showFilter(true)} type="button">Show Filters</button>
       </div>
 
     )
