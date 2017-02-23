@@ -1,6 +1,8 @@
 import { createStore, applyMiddleware } from 'redux'
 import { apiMiddleware } from 'redux-api-middleware';
 import searchReducer from './search/reducers'
+import thunk from 'redux-thunk'
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 let initialState = {
   showFilter: true,
@@ -13,7 +15,6 @@ let initialState = {
   }
 }
 
-const createStoreWithMiddleware = applyMiddleware(apiMiddleware)(createStore);
-const store = createStoreWithMiddleware(searchReducer, initialState, typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const store = createStore(searchReducer, initialState, composeWithDevTools(applyMiddleware(thunk, apiMiddleware)));
 
 export default store
