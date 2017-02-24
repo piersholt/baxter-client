@@ -46,12 +46,13 @@ class Results extends React.Component {
     return (
       <table className="table table-fixed table-hover">
         <thead>
-          <tr>
+          <tr className="table-header">
             <th></th>
             <th></th>
             <th>Followers</th>
-            <th>AEPP</th>
-            <th>AER</th>
+            <th>Reach (10%)</th>
+            <th>Average Eng. Per Post</th>
+            <th>Average Eng. Rate</th>
           </tr>
         </thead>
         <tbody>
