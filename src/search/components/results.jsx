@@ -25,8 +25,9 @@ class Results extends React.Component {
             <th></th>
             <th></th>
             <th>Followers</th>
-            <th>AEPP</th>
-            <th>AER</th>
+            <th>Reach</th>
+            <th>Engagement</th>
+            <th>Engagement Rate</th>
           </tr>
         </thead>
         <tbody>
