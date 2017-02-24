@@ -30,6 +30,8 @@ class Filter extends React.Component {
     this.setState({
       [name]: value
     });
+
+    this.props.changeSearchParameters(this.parameters())
   }
 
   parameters() {

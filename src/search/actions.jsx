@@ -6,7 +6,8 @@ export const InterfaceActions = {
   ADD_ACCOUNT: 'ADD_ACCOUNT',
   ADD_ACCOUNTS: 'ADD_ACCOUNTS',
   SELECT_ACCOUNT: 'SELECT_ACCOUNT',
-  SHOW_FILTER: 'SHOW_FILTER'
+  SHOW_FILTER: 'SHOW_FILTER',
+  CHANGE_SEARCH_PARAMETERS: 'CHANGE_SEARCH_PARAMETERS'
 }
 
 export const QueryActions = {
@@ -45,6 +46,13 @@ export function showFilter(bool) {
   return {
     type: InterfaceActions.SHOW_FILTER,
     showFilter: bool
+  }
+}
+
+export function changeSearchParameters(parameters) {
+  return {
+    type: InterfaceActions.CHANGE_SEARCH_PARAMETERS,
+    parameters: parameters
   }
 }
 
