@@ -14,7 +14,7 @@ class Result extends React.Component {
         <td className="profile-picture">
           <img className='result-profile-image' role="presentation" src={this.props.account.profile_picture} width='64' />
         </td>
-        <td>
+        <td className="result-bio">
           <div className="row">
             <div className="col-md-12">
               <div className="full-name">

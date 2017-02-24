@@ -37,6 +37,10 @@ body, html {
   background-color: #f5f5f5;
 }
 
+.result-bio {
+  padding-right: 15px  !important;;
+}
+
 #SearchProfile {
   width: 400px;
   height: 100%;
