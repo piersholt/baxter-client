@@ -184,6 +184,8 @@ a:hover {
 
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
   vertical-align: middle !important;
+  border-top: hidden;
+  border-bottom: hidden;
 }
 
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
@@ -197,7 +199,7 @@ td {
   color: #8D8F94;
   line-height: 18px;
   overflow: hidden;
-  border-bottom: 2px solid transparent;
+  border: none;
 }
 
 th {
@@ -205,6 +207,7 @@ th {
   font-weight: normal;
   font-size: 12px;
   color: #8D8F94;
+  border-bottom: 1px solid #DADEE6 !important;
 }
 
 tr {
@@ -212,6 +215,12 @@ tr {
   -webkit-box-shadow: 0px 25px 0px -24px rgba(231,234,243,1);
   -moz-box-shadow: 0px 25px 0px -24px rgba(231,234,243,1);
   box-shadow: 0px 25px 0px -24px rgba(231,234,243,1);
+}
+
+.table-header {
+  height: 60px;
+  vertical-align: bottom !important;
+  box-shadow: none;
 }
 
 .result-metric {
@@ -329,7 +338,7 @@ tr {
 }
 
 .filter-buttons {
-  margin-bottom: 24px;
+  padding-bottom: 32px !important;
 }
 
 .filter-checkbox {
@@ -370,4 +379,8 @@ hr {
 .navbar-brand img {
   height: 14px;
   width: 84px;
+}
+
+.email-sign-in-form {
+  padding-top: 96px;
 }
