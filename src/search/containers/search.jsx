@@ -10,11 +10,6 @@ let mapStateToProps = (state) => {
     showResults = true
   }
 
-  if (state.accounts.length == 0) {
-    showFilter = true
-    showOverview = false
-    showResults = false
-  }
 
   return {
     showResults: showResults,
