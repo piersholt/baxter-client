@@ -2,6 +2,10 @@ import React from 'react';
 
 class Profile extends React.Component {
 
+  profileLink() {
+    return "https://www.instagram.com/" + this.props.username + "/"
+  }
+
   render () {
 
     let posts = this.props.posts.map(
@@ -24,7 +28,7 @@ class Profile extends React.Component {
           <div className='col-md-9'>
             <div className='row profile-actions'>
               <div className='col-md-12'>
-                <a href="http://instagram.com/nikkikphillips" className="btn btn-rounded" target="_blank">View Instagram</a>
+                <a href={ this.profileLink() } className="btn btn-rounded" target="_blank">View Instagram</a>
               </div>
             </div>
             <div className='row profile-counts'>
