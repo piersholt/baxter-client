@@ -1,4 +1,5 @@
 import React from 'react';
+import numeral from 'numeral';
 
 class Result extends React.Component {
   render () {
@@ -22,16 +23,16 @@ class Result extends React.Component {
           </div>
         </td>
         <td className="result-metric">
-          { this.props.account.counts.followers }
+          { numeral(this.props.account.counts.followers).format('0.0a') }
         </td>
         <td className="result-metric">
-          { this.props.account.counts.followers/10 }
+          { numeral(this.props.account.counts.followers/10).format('0a') }
         </td>
         <td className="result-metric">
-          { this.props.account.engagement === undefined ? '-' : this.props.account.engagement.aggregate }
+          { this.props.account.engagement === undefined ? '-' : numeral(this.props.account.engagement.aggregate).format('0a') }
         </td>
         <td className="result-metric">
-          { this.props.account.engagement === undefined ? '-' : this.props.account.engagement.rate }
+          { this.props.account.engagement === undefined ? '-' : numeral(this.props.account.engagement.rate).format('0.00%') }
         </td>
     </tr>
     )

@@ -1,4 +1,5 @@
 import React from 'react';
+import numeral from 'numeral';
 
 class Profile extends React.Component {
 
@@ -33,15 +34,15 @@ class Profile extends React.Component {
             </div>
             <div className='row profile-counts'>
               <div className='col-md-4'>
-                {this.props.counts.media}
+                {numeral(this.props.counts.media).format()}
                 <div className='profile-counts-label'>Posts</div>
               </div>
               <div className='col-md-4'>
-                {this.props.counts.followers}
+                {numeral(this.props.counts.followers).format()}
                 <div className='profile-counts-label'>Followers</div>
               </div>
               <div className='col-md-4'>
-                {this.props.counts.following}
+                {numeral(this.props.counts.following).format()}
                 <div className='profile-counts-label'>Following</div>
               </div>
             </div>
