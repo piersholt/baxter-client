@@ -23,25 +23,25 @@ class Profile extends React.Component {
       <div>
 
         <div className='row'>
-          <div className='col-md-3 nopadding'>
+          <div className='col-xs-3 col-md-3 nopadding'>
             <img className='img-circle' role="presentation" src={this.props.profile_picture} width='96' />
           </div>
-          <div className='col-md-9'>
+          <div className='col-xs-9 col-md-9'>
             <div className='row profile-actions'>
               <div className='col-md-12'>
                 <a href={ this.profileLink() } className="btn btn-rounded" target="_blank">View Instagram</a>
               </div>
             </div>
             <div className='row profile-counts'>
-              <div className='col-md-2'>
+              <div className='col-xs-4 col-md-2'>
                 {numeral(this.props.counts.media).format()}
                 <div className='profile-counts-label'>Posts</div>
               </div>
-              <div className='col-md-3 col-md-offset-2'>
+              <div className='col-xs-4 col-md-3 col-md-offset-2'>
                 {numeral(this.props.counts.followers).format()}
                 <div className='profile-counts-label'>Followers</div>
               </div>
-              <div className='col-md-3 col-md-offset-2'>
+              <div className='col-xs-4 col-md-3 col-md-offset-2'>
                 {numeral(this.props.counts.following).format()}
                 <div className='profile-counts-label'>Following</div>
               </div>
