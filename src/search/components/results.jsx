@@ -21,7 +21,7 @@ class Results extends React.Component {
       <div>
       <table className="table table-fixed table-hover">
         <thead>
-          <tr>
+          <tr className="resultHeader">
             <th></th>
             <th></th>
             <th>Followers</th>
