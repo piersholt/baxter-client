@@ -33,15 +33,15 @@ class Profile extends React.Component {
               </div>
             </div>
             <div className='row profile-counts'>
-              <div className='col-md-4'>
+              <div className='col-md-2'>
                 {numeral(this.props.counts.media).format()}
                 <div className='profile-counts-label'>Posts</div>
               </div>
-              <div className='col-md-4'>
+              <div className='col-md-3 col-md-offset-2'>
                 {numeral(this.props.counts.followers).format()}
                 <div className='profile-counts-label'>Followers</div>
               </div>
-              <div className='col-md-4'>
+              <div className='col-md-3 col-md-offset-2'>
                 {numeral(this.props.counts.following).format()}
                 <div className='profile-counts-label'>Following</div>
               </div>

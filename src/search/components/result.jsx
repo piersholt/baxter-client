@@ -23,7 +23,7 @@ class Result extends React.Component {
           </div>
         </td>
         <td className="result-metric">
-          { numeral(this.props.account.counts.followers).format('0.0a') }
+          { numeral(this.props.account.counts.followers).format('0a') }
         </td>
         <td className="result-metric">
           { numeral(this.props.account.counts.followers/10).format('0a') }
