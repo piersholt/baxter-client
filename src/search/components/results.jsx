@@ -9,22 +9,13 @@ class Results extends React.Component {
   }
 
   render () {
-    // console.log('Results / Rendering...')
-
     let accounts = null
 
     if (this.props.accounts.length > 0) {
-      // console.log('accounts not empty and longer than 0...')
       accounts = this.props.accounts.map(function(object) {
         return <ResultContainer key={object.id} id={object.id} account={object} />;
          })
-      // console.log('Results / Rendering / Accounts (in loop): ' + accounts)
     }
-    else {
-      // console.log('Results / Rendering / No accounts!')
-    }
-
-    // console.log('Results / Rendering / Accounts (outside loop): ' + accounts)
 
     return (
       <div>

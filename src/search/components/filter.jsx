@@ -34,6 +34,7 @@ class Filter extends React.Component {
     this.props.changeSearchParameters(this.parameters())
   }
 
+  // A bit of a faff, but there's no nested params in the form, but we nest them for the API
   parameters() {
     return {
       segment: {
