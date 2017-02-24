@@ -38,19 +38,19 @@ class Filter extends React.Component {
   parameters() {
     return {
       segment: {
-        fashion: (this.state.segmentFashion),
-        beauty: (this.state.segmentBeauty),
-        lifestyle: (this.state.segmentLifestyle),
-        food: (this.state.segmentFood),
-        health: (this.state.segmentHealth),
-        fitness: (this.state.segmentFitness)
+        fashion: (this.state.segmentFashion === undefined ? false : this.state.segmentFashion),
+        beauty: (this.state.segmentBeauty === undefined ? false : this.state.segmentBeauty),
+        lifestyle: (this.state.segmentLifestyle === undefined ? false : this.state.segmentLifestyle),
+        food: (this.state.segmentFood === undefined ? false : this.state.segmentFood),
+        health: (this.state.segmentHealth === undefined ? false : this.state.segmentHealth),
+        fitness: (this.state.segmentFitness === undefined ? false : this.state.segmentFitness)
       },
       origin: {
-        VIC: (this.state.originVIC),
-        NSW: (this.state.originNSW),
-        QLD: (this.state.originQLD),
-        SA:(this.state.originSA),
-        WA:(this.state.originWA)
+        VIC: (this.state.originVIC === undefined ? false : this.state.originVIC),
+        NSW: (this.state.originNSW === undefined ? false : this.state.originNSW),
+        QLD: (this.state.originQLD === undefined ? false : this.state.originQLD),
+        SA:(this.state.originSA === undefined ? false : this.state.originSA),
+        WA:(this.state.originWA === undefined ? false : this.state.originWA)
       },
       minFollowers: (this.state.minFollowers),
       maxFollowers: (this.state.maxFollowers),
