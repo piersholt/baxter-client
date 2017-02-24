@@ -2,9 +2,15 @@ import React from 'react';
 import numeral from 'numeral';
 
 class Result extends React.Component {
+  selected() {
+    if (this.props.selected ===  true) {
+      return ( "selectedResult" )
+    }
+  }
+
   render () {
     return (
-      <tr onClick={() => this.props.select(this.props.id)}>
+      <tr className={ this.selected() } onClick={() => this.props.select(this.props.id)}>
         <td className="profile-picture">
           <img className='result-profile-image' role="presentation" src={this.props.account.profile_picture} width='64' />
         </td>
