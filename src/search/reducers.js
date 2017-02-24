@@ -12,6 +12,21 @@ const selected = (state = false, action) => {
   }
 }
 
+const isFetching = (state = false, action) => {
+  switch (action.type) {
+    case QueryActions.SEARCH_REQUEST:
+      return true
+    case QueryActions.PAGINATE_REQUEST:
+      return true
+    case QueryActions.SEARCH_SUCCESS:
+      return false
+    case QueryActions.PAGINATE_SUCCESS:
+      return false
+    default:
+      return state
+  }
+}
+
 const showFilter = (state = false, action) => {
   switch (action.type) {
     case InterfaceActions.SHOW_FILTER:
@@ -72,7 +87,8 @@ const searchReducer = combineReducers({
   search_parameters,
   selected,
   showFilter,
-  payload
+  payload,
+  isFetching
 })
 
 export default searchReducer;

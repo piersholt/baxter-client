@@ -1,10 +1,15 @@
 import React from 'react';
 import { ResultContainer } from '../containers/result.jsx';
+import CircularProgress from 'material-ui/CircularProgress';
+
 
 class Results extends React.Component {
   showPaginate() {
-    if (this.props.showPaginate === true) {
-      return <button className="btn-rounded pull-right" onClick={() => this.props.paginateSearch(this.props.search_parameters)} type="button">Load More</button>
+    if (this.props.isFetching === true) {
+      return <center><CircularProgress /></center>
+    }
+    else if (this.props.showPaginate === true) {
+      return <center><button className="btn-rounded" onClick={() => this.props.paginateSearch(this.props.search_parameters)} type="button">Load More</button></center>
     }
   }
 
@@ -34,7 +39,9 @@ class Results extends React.Component {
           { accounts }
         </tbody>
       </table>
-      { this.showPaginate() }
+      <div class="center-block">
+        { this.showPaginate() }
+      </div>
     </div>
     )
   }

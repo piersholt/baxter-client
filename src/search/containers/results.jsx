@@ -12,7 +12,8 @@ let mapStateToProps = (state) => {
   return {
     accounts: state.accounts,
     search_parameters: state.search_parameters,
-    showPaginate: showPaginate
+    showPaginate: showPaginate,
+    isFetching: state.isFetching
   }
 };
 
