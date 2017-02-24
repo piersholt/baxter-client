@@ -28,10 +28,10 @@ class Result extends React.Component {
           { this.props.account.counts.followers/10 }
         </td>
         <td className="result-metric">
-          { 100 }
+          { this.props.account.engagement === undefined ? '-' : this.props.account.engagement.aggregate }
         </td>
         <td className="result-metric">
-          15%
+          { this.props.account.engagement === undefined ? '-' : this.props.account.engagement.rate }
         </td>
     </tr>
     )
