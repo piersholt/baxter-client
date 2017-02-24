@@ -53,12 +53,24 @@ const accounts = (state = [], action) => {
   }
 }
 
+const payload = (state = [], action) => {
+  switch (action.type) {
+    case QueryActions.PAGINATE_SUCCESS:
+      return action.payload
+    case QueryActions.SEARCH_SUCCESS:
+      return action.payload
+    default:
+      return state
+  }
+}
+
 const searchReducer = combineReducers({
   auth: authStateReducer,
   accounts,
   search_parameters,
   selected,
-  showFilter
+  showFilter,
+  payload
 })
 
 export default searchReducer;

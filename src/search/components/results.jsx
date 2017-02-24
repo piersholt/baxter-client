@@ -2,6 +2,12 @@ import React from 'react';
 import { ResultContainer } from '../containers/result.jsx';
 
 class Results extends React.Component {
+  showPaginate() {
+    if (this.props.showPaginate === true) {
+      return <button className="btn-rounded pull-right" onClick={() => this.props.paginateSearch(this.parameters())} type="button">Load More</button>
+    }
+  }
+
   parameters() {
     return {
       segment: {
@@ -44,6 +50,7 @@ class Results extends React.Component {
     // console.log('Results / Rendering / Accounts (outside loop): ' + accounts)
 
     return (
+      <div>
       <table className="table table-fixed table-hover">
         <thead>
           <tr>
@@ -56,9 +63,11 @@ class Results extends React.Component {
         </thead>
         <tbody>
           { accounts }
-          <tr><button className="btn-rounded pull-right" onClick={() => this.props.paginateSearch(this.parameters())} type="button">Load More</button></tr>
         </tbody>
-      </table> )
+      </table>
+      { this.showPaginate() }
+    </div>
+    )
   }
 }
 

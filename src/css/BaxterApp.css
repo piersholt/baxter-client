@@ -24,6 +24,7 @@ body, html {
 #SearchResults {
   padding-left: 0px;
   padding-right: 0px;
+  padding-bottom: 100px;
   overflow-y: scroll;
   top: 0;
   bottom: 0;
