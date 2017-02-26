@@ -34,11 +34,11 @@ class Search extends Component {
     if (this.props.showResults === true) {
       return (
         /** Search Results **/
-        <div className="row">
+
           <div className="col-md-12" id="SearchResults">
             <ResultsContainer accounts={{}}/>
           </div>
-        </div>
+
 
       )
     }
