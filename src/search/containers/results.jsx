@@ -3,9 +3,17 @@ import Results from '../components/results'
 import { paginateSearch } from '../actions'
 
 let mapStateToProps = (state) => {
+  let showPaginate = false
+
+  if (state.search_parameters.page < state.payload.meta.total_pages) {
+    showPaginate = true
+  }
+
   return {
     accounts: state.accounts,
-    search_parameters: state.search_parameters
+    search_parameters: state.search_parameters,
+    showPaginate: showPaginate,
+    isFetching: state.isFetching
   }
 };
 
