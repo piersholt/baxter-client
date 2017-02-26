@@ -57,6 +57,7 @@ body, html {
 
 a {
   font-family: Circular, sans-serif;
+
   font-weight: normal;
   font-size: 14px;
   color: #FF3B30 !important;
@@ -72,6 +73,7 @@ a:hover {
 
 .btn-rounded {
   font-family: Circular, sans-serif;
+
   font-weight: normal;
   font-size: 15px !important;
   color: #FFFFFF !important;
@@ -108,6 +110,7 @@ a:hover {
 
 .btn-outline:hover {
   font-family: Circular, sans-serif;
+  font-family: Circular;
   font-weight: 500;
   color: #FFFFFF !important;
   background: #FF5D54;
