@@ -24,7 +24,8 @@ let mapStateToProps = (state) => {
       website: 'http://frontroe.co/2jzjPiR',
       counts: { media: 0, followers: 0, following: 0 },
       bio: '',
-      posts: []
+      posts: [],
+      username: 'louiseroe'
     }
   }
 
@@ -34,7 +35,8 @@ let mapStateToProps = (state) => {
     website: selected_account.website,
     bio: selected_account.bio,
     counts: selected_account.counts,
-    posts: selected_account.posts
+    posts: selected_account.posts,
+    username: selected_account.username
   }
 }
 

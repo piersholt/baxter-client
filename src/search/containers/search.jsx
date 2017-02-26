@@ -3,13 +3,18 @@ import Search from '../components/search'
 
 let mapStateToProps = (state) => {
   let showResults = false
+  let showFilter = state.showFilter
+  let showOverview = !showFilter
+
   if (state.accounts.length > 0) {
     showResults = true
   }
 
+
   return {
     showResults: showResults,
-    showFilter: state.showFilter
+    showFilter: showFilter,
+    showOverview: showOverview
   }
 };
 
