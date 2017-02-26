@@ -61,7 +61,7 @@ class Filter extends React.Component {
         <div className="col-md-12">
           <form className="filter-forms">
 
-            <div className="row filter-buttons">
+            <div className="row filter-buttons nopadding">
               <button className="btn-rounded-jumbo pull-right" onClick={() => this.props.newSearch(this.parameters())} type="button">Find Influencers</button>
               <button className="btn-cancel pull-right" onClick={() => this.props.showFilter(false)} type="button">Cancel</button>
             </div>
