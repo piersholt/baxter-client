@@ -12,11 +12,28 @@ const selected = (state = false, action) => {
   }
 }
 
+const isFetching = (state = false, action) => {
+  switch (action.type) {
+    case QueryActions.SEARCH_REQUEST:
+      return true
+    case QueryActions.PAGINATE_REQUEST:
+      return true
+    case QueryActions.SEARCH_SUCCESS:
+      return false
+    case QueryActions.PAGINATE_SUCCESS:
+      return false
+    default:
+      return state
+  }
+}
+
 const showFilter = (state = false, action) => {
   switch (action.type) {
     case InterfaceActions.SHOW_FILTER:
       return action.showFilter
     case QueryActions.SEARCH_SUCCESS:
+      return action.meta.showFilter
+    case QueryActions.SEARCH_REQUEST:
       return action.meta.showFilter
     default:
       return state
@@ -29,6 +46,8 @@ const search_parameters = (state = {}, action) => {
       return Object.assign({}, state, action.meta.parameters)
     case QueryActions.PAGINATE_SUCCESS:
       return Object.assign({}, state, action.meta.parameters)
+    case InterfaceActions.CHANGE_SEARCH_PARAMETERS:
+      return Object.assign({}, state, action.parameters)
     default:
       return state
   }
@@ -51,12 +70,25 @@ const accounts = (state = [], action) => {
   }
 }
 
+const payload = (state = [], action) => {
+  switch (action.type) {
+    case QueryActions.PAGINATE_SUCCESS:
+      return action.payload
+    case QueryActions.SEARCH_SUCCESS:
+      return action.payload
+    default:
+      return state
+  }
+}
+
 const searchReducer = combineReducers({
   auth: authStateReducer,
   accounts,
   search_parameters,
   selected,
-  showFilter
+  showFilter,
+  payload,
+  isFetching
 })
 
 export default searchReducer;

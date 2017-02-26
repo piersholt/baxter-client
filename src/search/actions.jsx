@@ -6,7 +6,8 @@ export const InterfaceActions = {
   ADD_ACCOUNT: 'ADD_ACCOUNT',
   ADD_ACCOUNTS: 'ADD_ACCOUNTS',
   SELECT_ACCOUNT: 'SELECT_ACCOUNT',
-  SHOW_FILTER: 'SHOW_FILTER'
+  SHOW_FILTER: 'SHOW_FILTER',
+  CHANGE_SEARCH_PARAMETERS: 'CHANGE_SEARCH_PARAMETERS'
 }
 
 export const QueryActions = {
@@ -48,6 +49,13 @@ export function showFilter(bool) {
   }
 }
 
+export function changeSearchParameters(parameters) {
+  return {
+    type: InterfaceActions.CHANGE_SEARCH_PARAMETERS,
+    parameters: parameters
+  }
+}
+
 // API CALLS
 
 import { CALL_API } from 'redux-api-middleware';
@@ -59,7 +67,7 @@ export function newSearch(parameters) {
     [CALL_API]: {
       endpoint: 'http://localhost:3100/api/accounts.json'.concat('?' + url_parameters),
       method: 'GET',
-      types: [QueryActions.SEARCH_REQUEST, { type: QueryActions.SEARCH_SUCCESS, meta: { parameters: parameters, showFilter: true} }, 'FAILURE']
+      types: [{ type: QueryActions.SEARCH_REQUEST, meta: { showFilter: false} }, { type: QueryActions.SEARCH_SUCCESS, meta: { parameters: parameters, showFilter: false} }, 'FAILURE']
     }
   }
 }

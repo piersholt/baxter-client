@@ -2,6 +2,7 @@ import { connect } from 'react-redux'
 import Filter from '../components/filter'
 import { newSearch } from '../actions'
 import { showFilter } from '../actions'
+import { changeSearchParameters } from '../actions'
 
 let mapStateToProps = (state) => {
   return {
@@ -29,6 +30,9 @@ let mapDispatchToProps = (dispatch) => {
     },
     showFilter: (bool) => {
       dispatch(showFilter(bool));
+    },
+    changeSearchParameters: (parameters) => {
+      dispatch(changeSearchParameters(parameters));
     }
   }
 };

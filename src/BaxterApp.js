@@ -13,22 +13,24 @@ import { AuthGlobals } from "redux-auth/bootstrap-theme";
 // Components
 import Header from './search/components/header';
 
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 class BaxterApp extends Component {
   render() {
     return (
-      <Provider store={store}>
-        <div id="layout">
-          <AuthGlobals />
-          <Header />
-          <div className="container">
-            <div id="app">
-              {/* <EmailSignInForm />
-              <SearchContainer /> */}
-              { this.props.children }
+       <MuiThemeProvider>
+        <Provider store={store}>
+          <div id="layout">
+            <AuthGlobals />
+            <Header />
+            <div className="container">
+              <div id="app">
+                { this.props.children }
+              </div>
             </div>
           </div>
-        </div>
-      </Provider>
+        </Provider>
+      </MuiThemeProvider>
     );
   }
 }
