@@ -17,8 +17,11 @@ body, html {
 }
 
 #SearchOverview {
-  height: 78px;
+  height: 82px;
   padding-right: 24px;
+  padding-left: 24px;
+  padding-top: 22px;
+  border-bottom: 1px solid #DADEE6;
 }
 
 #SearchResults {
@@ -66,7 +69,8 @@ body, html {
 }
 
 a {
-  font-family: Circular;
+  font-family: Circular, sans-serif;
+
   font-weight: normal;
   font-size: 14px;
   color: #FF3B30 !important;
@@ -81,7 +85,8 @@ a:hover {
 }
 
 .btn-rounded {
-  font-family: Circular;
+  font-family: Circular, sans-serif;
+
   font-weight: normal;
   font-size: 15px !important;
   color: #FFFFFF !important;
@@ -103,7 +108,7 @@ a:hover {
 }
 
 .btn-outline {
-  font-family: Circular;
+  font-family: Circular, sans-serif;
   font-weight: normal;
   font-size: 15px !important;
   color: #FF3B30 !important;
@@ -117,6 +122,7 @@ a:hover {
 }
 
 .btn-outline:hover {
+  font-family: Circular, sans-serif;
   font-family: Circular;
   font-weight: 500;
   color: #FFFFFF !important;
@@ -130,7 +136,7 @@ a:hover {
 }
 
 .btn-rounded-jumbo {
-  font-family: Circular;
+  font-family: Circular, sans-serif;
   font-weight: 500;
   font-size: 19px !important;
   color: #FFFFFF !important;
@@ -152,7 +158,7 @@ a:hover {
 }
 
 .btn-cancel {
-  font-family: Circular;
+  font-family: Circular, sans-serif;
   font-weight: normal;
   font-size: 19px !important;
   color: #575757 !important;
@@ -194,6 +200,8 @@ a:hover {
 
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
   vertical-align: middle !important;
+  border-top: hidden;
+  border-bottom: hidden;
 }
 
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
@@ -201,20 +209,21 @@ a:hover {
 }
 
 td {
-  font-family: Circular;
+  font-family: Circular, sans-serif;
   font-weight: normal;
   font-size: 12px;
   color: #8D8F94;
   line-height: 18px;
   overflow: hidden;
-  border-bottom: 2px solid transparent;
+  border: none;
 }
 
 th {
-  font-family: Circular;
+  font-family: Circular, sans-serif;
   font-weight: normal;
   font-size: 12px;
   color: #8D8F94;
+  border-bottom: 1px solid #DADEE6 !important;
 }
 
 tr {
@@ -224,8 +233,14 @@ tr {
   box-shadow: 0px 25px 0px -24px rgba(231,234,243,1);
 }
 
+.table-header {
+  height: 60px;
+  vertical-align: bottom !important;
+  box-shadow: none;
+}
+
 .result-metric {
-  font-family: Circular;
+  font-family: Circular, sans-serif;
   font-weight: normal;
   font-size: 18px;
   color: #333333;
@@ -242,21 +257,21 @@ tr {
 }
 
 .full-name {
-  font-family: Circular;
+  font-family: Circular, sans-serif;
   font-weight: normal;
   font-size: 20px;
   color: #000000;
 }
 
 #bio {
-  font-family: Circular;
+  font-family: Circular, sans-serif;
   font-weight: normal;
   font-size: 14px;
   color: #333333;
 }
 
 #full_name {
-  font-family: Circular;
+  font-family: Circular, sans-serif;
   font-weight: normal;
   font-size: 24px;
   color: #000000;
@@ -264,7 +279,7 @@ tr {
 }
 
 #origin, #segment {
-  font-family: Circular;
+  font-family: Circular, sans-serif;
   font-weight: normal;
   font-size: 14px;
   color: #8D8F94;
@@ -280,7 +295,7 @@ tr {
 }
 
 .profile-counts {
-  font-family: Circular;
+  font-family: Circular, sans-serif;
   font-weight: normal;
   font-size: 16px;
   color: #333333;
@@ -311,14 +326,14 @@ tr {
 }
 
 .filter-form {
-  font-family: Circular;
+  font-family: Circular, sans-serif;
   font-weight: normal;
   font-size: 19px;
   color: #575757;
 }
 
 .label-primary {
-  font-family: Circular;
+  font-family: Circular, sans-serif;
   font-weight: normal;
   font-size: 29px;
   color: #575757;
@@ -331,7 +346,7 @@ tr {
 }
 
 .filter-header {
-  font-family: Circular;
+  font-family: Circular, sans-serif;
   font-weight: 500;
   font-size: 20px;
   color: #333333;
@@ -339,7 +354,7 @@ tr {
 }
 
 .filter-buttons {
-  margin-bottom: 24px;
+  padding-bottom: 32px !important;
 }
 
 .filter-checkbox {
@@ -347,7 +362,7 @@ tr {
 }
 
 .filter-label {
-  font-family: Circular;
+  font-family: Circular, sans-serif;
   font-weight: normal;
   font-size: 19px;
   color: #575757;
@@ -365,12 +380,11 @@ hr {
 }
 
 .search-overview {
-  font-family: Circular;
+  font-family: Circular, sans-serif;
   font-weight: normal;
   font-size: 17px;
   color: #8D8F94;
-  padding-left: 24px;
-  padding-top: 6px;
+  padding-top: 7px;
 }
 
 .navbar-brand {
@@ -381,4 +395,8 @@ hr {
 .navbar-brand img {
   height: 14px;
   width: 84px;
+}
+
+.email-sign-in-form {
+  padding-top: 96px;
 }
