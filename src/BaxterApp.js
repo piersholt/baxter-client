@@ -25,8 +25,6 @@ class BaxterApp extends Component {
             <Header />
             <div className="container">
               <div id="app">
-                {/* <EmailSignInForm />
-                <SearchContainer /> */}
                 { this.props.children }
               </div>
             </div>
