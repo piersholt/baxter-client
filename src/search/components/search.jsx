@@ -6,6 +6,7 @@ import { ResultsContainer } from '../containers/results'
 import { ProfileContainer } from '../containers/profile'
 import { FilterContainer } from '../containers/filter'
 import { OverviewContainer } from '../containers/overview'
+import CircularProgress from 'material-ui/CircularProgress';
 
 class Search extends Component {
   showFilter() {
@@ -44,6 +45,18 @@ class Search extends Component {
     }
   }
 
+  showFetching() {
+    if (this.props.showFetching === true) {
+      return (
+        <div className="row">
+          <div className="col-md-12">
+            <center><CircularProgress id="searchFetching" color="#FF4C42"/></center>
+          </div>
+        </div>
+      )
+    }
+  }
+
   render() {
     return (
       <div id="Search">
@@ -54,6 +67,7 @@ class Search extends Component {
               { this.showFilter() }
               { this.showOverview() }
               { this.showResults() }
+              { this.showFetching() }
             </div>
             { /** Selected Profile **/ }
             <div className="col-md-3" id="SearchProfile">

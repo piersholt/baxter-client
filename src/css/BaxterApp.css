@@ -54,6 +54,11 @@ select::-ms-expand {
   padding-top: 32px !important;
 }
 
+#searchFetching
+{
+  padding-top: 32px !important;
+}
+
 .email-sign-in-email.form-group .form-control, .email-sign-in-password.form-group .form-control {
   height: 48px;
   font-size: 19px !important;

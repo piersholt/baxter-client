@@ -61,6 +61,8 @@ const accounts = (state = [], action) => {
     case InterfaceActions.ADD_ACCOUNTS:
       return [...state].concat(action.accounts)
     // Query
+    case QueryActions.SEARCH_REQUEST:
+      return []
     case QueryActions.PAGINATE_SUCCESS:
       return [...state, ...action.payload.data]
     case QueryActions.SEARCH_SUCCESS:
