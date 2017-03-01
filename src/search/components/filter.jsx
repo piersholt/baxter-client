@@ -110,7 +110,7 @@ class Filter extends React.Component {
                     <input
                       name="segmentFood"
                       type="checkbox"
-                      checked={this.state.segmentFoodie}
+                      checked={this.state.segmentFood}
                       onChange={this.handleInputChange}
                       className="magic-checkbox"
                       id="segmentFood"/>
@@ -143,7 +143,7 @@ class Filter extends React.Component {
             <hr />
 
             {/*  ORIGIN */}
-            <fieldset className="segment">
+            <fieldset className="origin">
                 <div className="filter-header">Locations</div>
                   <div className="col-md-4">
                     <input
