@@ -6,7 +6,7 @@ import CircularProgress from 'material-ui/CircularProgress';
 class Results extends React.Component {
   showPaginate() {
     if (this.props.isFetching === true) {
-      return <center><CircularProgress /></center>
+      return <center><CircularProgress color="#FF4C42"/></center>
     }
     else if (this.props.showPaginate === true) {
       return <center><button className="btn-rounded" onClick={() => this.props.paginateSearch(this.props.search_parameters)} type="button">Load More</button></center>

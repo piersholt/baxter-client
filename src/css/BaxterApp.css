@@ -1,7 +1,114 @@
 body, html {
+  font-family: Circular, sans-serif;
   margin: 0;
   overflow: hidden;
   height: 100%;
+}
+
+.input-followers {
+  background-repeat: no-repeat;
+  background-position: right center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  line-height: 19px !important;
+  font-family: Circular, sans-serif;
+  font-weight: normal;
+  font-size: 19px !important;
+  padding-right: 200px;
+}
+
+.input-followers:focus {
+  outline: none !important;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.Absolute-Center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.Absolute-Center.is-Responsive {
+  width: 50%;
+  height: 50%;
+  min-width: 640px;
+  max-width: 640px;
+  padding: 40px;
+}
+
+.redux-auth.email-sign-in-form {
+  font-family: Circular, sans-serif;
+  font-weight: normal;
+  font-size: 19px !important;
+  line-height: 19px !important;
+  padding-right: 50px;
+  padding-left: 50px;
+  margin-top: 0px;
+}
+
+.email-sign-in-form {
+  padding-top: 32px !important;
+}
+
+.email-sign-in-email.form-group .form-control, .email-sign-in-password.form-group .form-control {
+  height: 48px;
+  font-size: 19px !important;
+  font-weight: normal;
+  color: #333333 !important;
+  box-shadow: none;
+  padding-left: 16px;
+  border-color: #DADEE6;
+  margin-bottom: 24px;
+}
+
+.email-sign-in-email.form-group .form-control::placeholder, .email-sign-in-password.form-group .form-control::placeholder  {
+  color: #AAADB3 !important;
+}
+
+.email-sign-in-email.form-group label.control-label {
+  display: none;
+}
+
+.email-sign-in-password.form-group label.control-label {
+  display: none;
+}
+
+.email-sign-in-submit.pull-right.btn.btn-default {
+  font-family: Circular, sans-serif;
+  font-weight: 500;
+  font-size: 19px !important;
+  color: #FFFFFF !important;
+  padding-left: 32px !important;
+  padding-right: 48px !important;
+  margin-top: 8px;
+  background-color: #FF4C42;
+  background-image: none;
+  height: 48px;
+  min-width: 160px;
+  border-radius: 24px !important;
+  border: none;
+  text-shadow: none;
+  box-shadow: none;
+}
+
+.glyphicon.glyphicon-log-in {
+  visibility: hidden;
+  display: none;
+}
+
+.sign-out-submit.btn.btn-default {
+  visibility: hidden;
+  display: none;
+}
+
+.element-followers-arrow {
+  height: 12px;
+  width: 21px !important;
+  margin-top: 16px;
 }
 
 #SearchFilterResults {
@@ -41,7 +148,7 @@ body, html {
 }
 
 .selectedResult {
-  background-color: #f5f5f5;
+  background-color: #E7EAF3;
 }
 
 .result-bio {
@@ -86,7 +193,6 @@ a:hover {
 
 .btn-rounded {
   font-family: Circular, sans-serif;
-
   font-weight: normal;
   font-size: 15px !important;
   color: #FFFFFF !important;
@@ -372,6 +478,8 @@ tr {
 }
 
 .input-followers {
+  border-color: #DADEE6 !important;
+  box-shadow: none !important;
 }
 
 hr {
@@ -385,6 +493,7 @@ hr {
   font-size: 17px;
   color: #8D8F94;
   padding-top: 7px;
+  padding-left: 18px;
 }
 
 .navbar-brand {

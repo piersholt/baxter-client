@@ -223,6 +223,9 @@ class Filter extends React.Component {
                   <option>1m</option>
                 </select>
               </div>
+              <div className="col-md-1 element-followers-arrow nopadding">
+                <img src={require('../../../public/el-followers-arrow@2x.png')} className="element-followers-arrow"/>
+              </div>
               <div className="col-md-2">
                 <select
                   name="maxFollowers"
