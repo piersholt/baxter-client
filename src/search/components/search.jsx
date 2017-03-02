@@ -63,7 +63,7 @@ class Search extends Component {
         <div className="container">
           <div className="row">
 
-            <div className="col-md-9" id="SearchFilterResults">
+            <div className="col-md-12" id="SearchFilterResults">
               { this.showFilter() }
               { this.showOverview() }
               { this.showResults() }
