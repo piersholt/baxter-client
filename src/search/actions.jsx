@@ -63,7 +63,7 @@ import { CALL_API } from 'redux-api-middleware';
 export function newSearch(parameters) {
   var param = require('jquery-param');
   let url_parameters = param(parameters)
-  let endpoint = 'https://dredger.piersholt.com/api/'
+  let endpoint = 'https://dredger.piersholt.com:22786/api/'
   let parsed_endpoint = endpoint.concat('accounts.json').concat('?' + url_parameters)
   return {
     [CALL_API]: {
@@ -79,7 +79,7 @@ export function paginateSearch(parameters) {
 
   var param = require('jquery-param');
   let url_parameters = param(parameters)
-  let endpoint = 'https://dredger.piersholt.com/api/'
+  let endpoint = 'https://dredger.piersholt.com:22786/api/'
   let parsed_endpoint = endpoint.concat('accounts.json').concat('?' + url_parameters)
   return {
     [CALL_API]: {
