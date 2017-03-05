@@ -42,12 +42,14 @@ const showFilter = (state = false, action) => {
 
 const search_parameters = (state = {}, action) => {
   switch (action.type) {
+    case QueryActions.SEARCH_REQUEST:
+      return Object.assign({}, state, action.meta.parameters)
     case QueryActions.SEARCH_SUCCESS:
       return Object.assign({}, state, action.meta.parameters)
     case QueryActions.PAGINATE_SUCCESS:
       return Object.assign({}, state, action.meta.parameters)
-    case InterfaceActions.CHANGE_SEARCH_PARAMETERS:
-      return Object.assign({}, state, action.parameters)
+    // case InterfaceActions.CHANGE_SEARCH_PARAMETERS:
+    //   return Object.assign({}, state, action.parameters)
     default:
       return state
   }

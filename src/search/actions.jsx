@@ -69,7 +69,7 @@ export function newSearch(parameters) {
     [CALL_API]: {
       endpoint: parsed_endpoint,
       method: 'GET',
-      types: [{ type: QueryActions.SEARCH_REQUEST, meta: { showFilter: false} }, { type: QueryActions.SEARCH_SUCCESS, meta: { parameters: parameters, showFilter: false} }, 'FAILURE']
+      types: [{ type: QueryActions.SEARCH_REQUEST, meta: { parameters: parameters, showFilter: false} }, { type: QueryActions.SEARCH_SUCCESS, meta: { parameters: parameters, showFilter: false} }, 'FAILURE']
     }
   }
 }

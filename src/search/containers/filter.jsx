@@ -6,12 +6,16 @@ import { changeSearchParameters } from '../actions'
 
 let mapStateToProps = (state) => {
   return {
-    segmentFashion: (state.search_parameters.segment.fashion),
-    segmentBeauty: (state.search_parameters.segment.beauty),
-    segmentLifestyle: (state.search_parameters.segment.lifestyle),
-    segmentFood: (state.search_parameters.segment.food),
-    segmentHealth: (state.search_parameters.segment.health),
-    segmentFitness: (state.search_parameters.segment.fitness),
+    s_f: (state.search_parameters.segment.s_f),
+    s_b: (state.search_parameters.segment.s_b),
+    s_fd: (state.search_parameters.segment.s_fd),
+    s_c: (state.search_parameters.segment.s_c),
+    s_hi: (state.search_parameters.segment.s_hi),
+    s_l: (state.search_parameters.segment.s_l),
+    s_hf: (state.search_parameters.segment.s_hf),
+    s_cp: (state.search_parameters.segment.s_cp),
+    s_ap: (state.search_parameters.segment.s_ap),
+    s_t: (state.search_parameters.segment.s_t),
     originVIC: (state.search_parameters.origin.VIC),
     originNSW: (state.search_parameters.origin.NSW),
     originQLD: (state.search_parameters.origin.QLD),
