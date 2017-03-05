@@ -151,13 +151,13 @@ class Filter extends React.Component {
 
                   <div className="col-md-4">
                     <input
-                      name="s_h"
+                      name="s_hf"
                       type="checkbox"
                       checked={this.state.s_h}
                       onChange={this.handleInputChange}
                       className="magic-checkbox"
-                      id="s_h"/>
-                    <label htmlFor="s_h" className="filter-label">Health</label>
+                      id="s_hf"/>
+                    <label htmlFor="s_hf" className="filter-label">Health</label>
                   </div>
 
                   <div className="col-md-4">
