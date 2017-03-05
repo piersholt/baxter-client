@@ -7,6 +7,8 @@ const selected = (state = false, action) => {
   switch (action.type) {
     case InterfaceActions.SELECT_ACCOUNT:
       return action.account_id
+    case QueryActions.SEARCH_SUCCESS:
+      return action.payload.data[0].id
     default:
       return state
   }
