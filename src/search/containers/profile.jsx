@@ -1,6 +1,18 @@
 import { connect } from 'react-redux'
 import Profile from '../components/profile'
 
+export let buildString = (array) => {
+  let output = ''
+  let delimiter = ', '
+
+  for (const item of array) {
+    output = output + item + delimiter
+  }
+
+  output = output.slice(0, -2)
+  return output
+}
+
 let mapStateToProps = (state) => {
   let selected_id = state.selected
   let selected_account = null
@@ -19,9 +31,14 @@ let mapStateToProps = (state) => {
       counts: { media: 0, followers: 0, following: 0 },
       bio: '',
       posts: [],
-      username: 'louiseroe'
+      segments: [],
+      username: 'louiseroe',
+      origin: {state: 'None', country: 'None' }
     }
   }
+
+  let segments = buildString(selected_account.segments)
+  let origin = buildString([selected_account.origin.state, selected_account.origin.country])
 
   return {
     profile_picture: selected_account.profile_picture,
@@ -30,7 +47,9 @@ let mapStateToProps = (state) => {
     bio: selected_account.bio,
     counts: selected_account.counts,
     posts: selected_account.posts,
-    username: selected_account.username
+    username: selected_account.username,
+    segments: segments,
+    origin: origin
   }
 }
 

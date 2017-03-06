@@ -62,11 +62,11 @@ class Profile extends React.Component {
         </div>
 
         <div className='row'>
-          <div id="origin">Victoria, NSW</div>
+          <div id="origin">{ this.props.origin }</div>
         </div>
 
         <div className='row'>
-          <div id="segment">Fashion, Lifestyle</div>
+          <div id="segment">{ this.props.segments }</div>
         </div>
 
         <div className='row'>
