@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import Profile from '../components/profile'
 
-export let buildString = (array) => {
+export function buildString(array) {
   let output = ''
   let delimiter = ', '
 
