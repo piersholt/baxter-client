@@ -57,6 +57,14 @@ class Search extends Component {
     }
   }
 
+  showProfile() {
+    if (this.props.showProfile === true) {
+      return (
+        <ProfileContainer />
+      )
+    }
+  }
+
   render() {
     return (
       <div id="Search">
@@ -71,7 +79,7 @@ class Search extends Component {
             </div>
             { /** Selected Profile **/ }
             <div className="col-md-3" id="SearchProfile">
-              <ProfileContainer />
+              { this.showProfile() }
             </div>
           </div>
         </div>
