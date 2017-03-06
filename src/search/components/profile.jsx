@@ -34,15 +34,15 @@ class Profile extends React.Component {
             </div>
             <div className='row profile-counts'>
               <div className='col-xs-4 col-md-2'>
-                {numeral(this.props.counts.media).format()}
+                { this.props.counts.media < 1000 ? this.props.counts.media : numeral(this.props.counts.media).format('0a') }
                 <div className='profile-counts-label'>Posts</div>
               </div>
               <div className='col-xs-4 col-md-3 col-md-offset-2'>
-                {numeral(this.props.counts.followers).format()}
+                {numeral(this.props.counts.followers).format('0.0a')}
                 <div className='profile-counts-label'>Followers</div>
               </div>
               <div className='col-xs-4 col-md-3 col-md-offset-2'>
-                {numeral(this.props.counts.following).format()}
+                { this.props.counts.follows < 1000 ? this.props.counts.follows : numeral(this.props.counts.follows).format('0.0a') }
                 <div className='profile-counts-label'>Following</div>
               </div>
             </div>
@@ -62,11 +62,11 @@ class Profile extends React.Component {
         </div>
 
         <div className='row'>
-          <div id="origin">Victoria, NSW</div>
+          <div id="origin">{ this.props.origin }</div>
         </div>
 
         <div className='row'>
-          <div id="segment">Fashion, Lifestyle</div>
+          <div id="segment">{ this.props.segments }</div>
         </div>
 
         <div className='row'>

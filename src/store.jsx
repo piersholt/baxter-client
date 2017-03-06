@@ -25,6 +25,30 @@ let initialState = {
     },
     minFollowers: 5000,
     maxFollowers: 1000000
+  },
+  maps: {
+    segment: {
+      s_f: 'Fashion',
+      s_b: 'Beauty',
+      s_fd: 'Food & Drinks',
+      s_c: 'Cooking',
+      s_hi: 'Home & Interior',
+      s_l: 'Lifestyle',
+      s_hf: 'Health & Fitness',
+      s_cp: 'Children & Parenting',
+      s_ap: 'Animals & Pets',
+      s_t: 'Travel'
+    },
+    origin: {
+      VIC: 'Victoria',
+      NSW: 'New South Wales',
+      WA: 'Western Australia',
+      TAS: 'Tasmania',
+      SA: 'South Australia',
+      QLD: 'Queensland',
+      NT: 'Northern Territory',
+      ACT: 'Australian Capital Territory'
+    }
   }
 }
 
