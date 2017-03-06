@@ -57,6 +57,13 @@ const search_parameters = (state = {}, action) => {
   }
 }
 
+const maps = (state = {}, action) => {
+  switch (action.type) {
+    default:
+      return state
+  }
+}
+
 const accounts = (state = [], action) => {
   switch (action.type) {
     // Interface
@@ -94,7 +101,8 @@ const searchReducer = combineReducers({
   selected,
   showFilter,
   payload,
-  isFetching
+  isFetching,
+  maps
 })
 
 export default searchReducer;

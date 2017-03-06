@@ -1,23 +1,38 @@
 import { connect } from 'react-redux'
 import Overview from '../components/overview'
 import { showFilter } from '../actions'
+import { buildString } from './profile'
 
 let mapStateToProps = (state) => {
-  let output = []
-
-  let segment = state.search_parameters.segment
-
-  let keys = Object.keys(segment)
-  keys.forEach(function(key){
-    segment[key] === true ? output.push(key) : null
+  let segmentOutput = []
+  let searchParametersSegments = state.search_parameters.segment
+  let segmentKeys = Object.keys(searchParametersSegments)
+  segmentKeys.forEach(function(key) {
+    if (searchParametersSegments[key] === true) {
+      let segmentName = state.maps.segment[key]
+      segmentOutput.push(segmentName)
+    }
   })
 
+  segmentOutput = buildString(segmentOutput)
 
 
-  console.log(output)
+  let originOutput = []
+  let searchParametersOrigins = state.search_parameters.origin
+  let originKeys = Object.keys(searchParametersOrigins)
+  originKeys.forEach(function(key) {
+    if (searchParametersOrigins[key] === true) {
+      let originName = state.maps.origin[key]
+      originOutput.push(originName)
+    }
+  })
+
+  originOutput = buildString(originOutput)
+
 
   return {
-    segments: output
+    segments: segmentOutput,
+    origin: originOutput
   }
 };
 
