@@ -7,6 +7,8 @@ const selected = (state = false, action) => {
   switch (action.type) {
     case InterfaceActions.SELECT_ACCOUNT:
       return action.account_id
+    case QueryActions.SEARCH_SUCCESS:
+      return action.payload.data[0].id
     default:
       return state
   }
@@ -42,12 +44,21 @@ const showFilter = (state = false, action) => {
 
 const search_parameters = (state = {}, action) => {
   switch (action.type) {
+    case QueryActions.SEARCH_REQUEST:
+      return Object.assign({}, state, action.meta.parameters)
     case QueryActions.SEARCH_SUCCESS:
       return Object.assign({}, state, action.meta.parameters)
     case QueryActions.PAGINATE_SUCCESS:
       return Object.assign({}, state, action.meta.parameters)
-    case InterfaceActions.CHANGE_SEARCH_PARAMETERS:
-      return Object.assign({}, state, action.parameters)
+    // case InterfaceActions.CHANGE_SEARCH_PARAMETERS:
+    //   return Object.assign({}, state, action.parameters)
+    default:
+      return state
+  }
+}
+
+const maps = (state = {}, action) => {
+  switch (action.type) {
     default:
       return state
   }
@@ -61,8 +72,8 @@ const accounts = (state = [], action) => {
     case InterfaceActions.ADD_ACCOUNTS:
       return [...state].concat(action.accounts)
     // Query
-    case QueryActions.SEARCH_REQUEST:
-      return []
+    // case QueryActions.SEARCH_REQUEST:
+    //   return []
     case QueryActions.PAGINATE_SUCCESS:
       return [...state, ...action.payload.data]
     case QueryActions.SEARCH_SUCCESS:
@@ -90,7 +101,8 @@ const searchReducer = combineReducers({
   selected,
   showFilter,
   payload,
-  isFetching
+  isFetching,
+  maps
 })
 
 export default searchReducer;

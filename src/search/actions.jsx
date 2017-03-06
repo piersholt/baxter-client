@@ -63,11 +63,13 @@ import { CALL_API } from 'redux-api-middleware';
 export function newSearch(parameters) {
   var param = require('jquery-param');
   let url_parameters = param(parameters)
+  let endpoint = 'https://dredger.piersholt.com:22786/api/'
+  let parsed_endpoint = endpoint.concat('accounts.json').concat('?' + url_parameters)
   return {
     [CALL_API]: {
-      endpoint: 'http://localhost:3100/api/accounts.json'.concat('?' + url_parameters),
+      endpoint: parsed_endpoint,
       method: 'GET',
-      types: [{ type: QueryActions.SEARCH_REQUEST, meta: { showFilter: false} }, { type: QueryActions.SEARCH_SUCCESS, meta: { parameters: parameters, showFilter: false} }, 'FAILURE']
+      types: [{ type: QueryActions.SEARCH_REQUEST, meta: { parameters: parameters, showFilter: false} }, { type: QueryActions.SEARCH_SUCCESS, meta: { parameters: parameters, showFilter: false} }, 'FAILURE']
     }
   }
 }
@@ -77,10 +79,11 @@ export function paginateSearch(parameters) {
 
   var param = require('jquery-param');
   let url_parameters = param(parameters)
-
+  let endpoint = 'https://dredger.piersholt.com:22786/api/'
+  let parsed_endpoint = endpoint.concat('accounts.json').concat('?' + url_parameters)
   return {
     [CALL_API]: {
-      endpoint: 'http://localhost:3100/api/accounts.json'.concat('?' + url_parameters),
+      endpoint: parsed_endpoint,
       method: 'GET',
       types: [QueryActions.PAGINATE_REQUEST, { type: QueryActions.PAGINATE_SUCCESS, meta: { parameters: parameters} }, 'FAILURE']
     }

@@ -6,6 +6,7 @@ let mapStateToProps = (state) => {
   let showFilter = state.showFilter
   let showOverview = !showFilter
   let showFetching = false
+  let showProfile = false
 
   if (state.accounts.length > 0 ) {
     showResults = true
@@ -16,11 +17,16 @@ let mapStateToProps = (state) => {
     showFetching = true
   }
 
+  if (state.accounts.length > 0) {
+    showProfile = true
+  }
+
   return {
     showResults: showResults,
     showFilter: showFilter,
     showOverview: showOverview,
-    showFetching: showFetching
+    showFetching: showFetching,
+    showProfile: showProfile
   }
 };
 

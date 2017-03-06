@@ -39,7 +39,7 @@ class Results extends React.Component {
           { accounts }
         </tbody>
       </table>
-      <div class="center-block">
+      <div className="center-block">
         { this.showPaginate() }
       </div>
     </div>
