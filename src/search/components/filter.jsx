@@ -157,7 +157,7 @@ class Filter extends React.Component {
                       onChange={this.handleInputChange}
                       className="magic-checkbox"
                       id="s_hf"/>
-                    <label htmlFor="s_hf" className="filter-label">Health</label>
+                    <label htmlFor="s_hf" className="filter-label">Health & Fitness</label>
                   </div>
 
                   <div className="col-md-4">
