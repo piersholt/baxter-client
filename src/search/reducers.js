@@ -135,9 +135,9 @@ const error = (state = null, action) => {
     case QueryActions.PAGINATE_SUCCESS:
       return null
     case QueryActions.SEARCH_FAILURE:
-      return 'Search has failed!'
+      return 'Ok, something has broken. I couldn\'t get more data!'
     case QueryActions.PAGINATE_FAILURE:
-      return 'Pagination has failed!'
+      return 'Ok, something has broken. I couldn\'t get more data!'
     case 'AUTHENTICATE_COMPLETE':
       return null
     case 'AUTHENTICATE_ERROR':
