@@ -9,19 +9,18 @@ let initialState = {
   search_parameters:
   {
     segment: {
-      s_f: true,
+      s_f: false,
       s_b: false,
       s_fd: false,
       s_c: false,
       s_hi: false,
-      s_l: true,
+      s_l: false,
       s_hf: false,
       s_cp: false,
       s_ap: false,
       s_t: false
     },
     origin: {
-      VIC: true
     },
     minFollowers: 5000,
     maxFollowers: 1000000

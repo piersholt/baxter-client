@@ -17,19 +17,19 @@ class Result extends React.Component {
         <td className="result-bio">
           <div className="row">
             <div className="col-md-12">
-              <div className="full-name">
-                { this.props.account.full_name }
+              <div className="username">
+                { this.props.account.username }
               </div>
             </div>
           </div>
           <div className="row">
             <div className="col-md-12">
-              <div className="second">{ this.props.account.bio }</div>
+              <div className="second"><b>{ this.props.account.full_name } </b>{ this.props.account.bio }</div>
             </div>
           </div>
         </td>
         <td className="result-metric">
-          { numeral(this.props.account.counts.followers).format('0a') }
+          { this.props.account.counts.followers < 1000000 ? numeral(this.props.account.counts.followers).format('0a') : numeral(this.props.account.counts.followers).format('0.00a') }
         </td>
         <td className="result-metric">
           { numeral(this.props.account.counts.followers/10).format('0a') }

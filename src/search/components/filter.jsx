@@ -12,7 +12,6 @@ class Filter extends React.Component {
       s_l: (this.props.s_l),
       s_hf: (this.props.s_hf),
       s_cp: (this.props.s_cp),
-      s_cp: (this.props.s_cp),
       s_ap: (this.props.s_ap),
       s_t: (this.props.s_t),
       segmentFitness: (this.props.segmentFitness),
@@ -275,6 +274,7 @@ class Filter extends React.Component {
                   <option value="250000">250k</option>
                   <option value="500000">500k</option>
                   <option value="1000000">1m</option>
+                  <option value="5000000">5m</option>
                 </select>
               </div>
               <div className="col-md-1 element-followers-arrow nopadding">
@@ -294,7 +294,8 @@ class Filter extends React.Component {
                   <option value="100000">100k</option>
                   <option value="250000">250k</option>
                   <option value="500000">500k</option>
-                  <option value="1000000" selected="selected">Over 1m</option>
+                  <option value="1000000">1m</option>
+                  <option value="5000000" selected="selected">5m</option>
                 </select>
               </div>
             </fieldset>

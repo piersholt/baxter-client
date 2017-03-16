@@ -24,7 +24,7 @@ class Profile extends React.Component {
 
         <div className='row'>
           <div className='col-xs-3 col-md-3 nopadding'>
-            <img className='img-circle' role="presentation" src={this.props.profile_picture} width='96' />
+            <img className='img-circle' role="presentation" src={this.props.profile_picture} width='92' />
           </div>
           <div className='col-xs-9 col-md-9'>
             <div className='row profile-actions'>
@@ -34,11 +34,11 @@ class Profile extends React.Component {
             </div>
             <div className='row profile-counts'>
               <div className='col-xs-4 col-md-2'>
-                { this.props.counts.media < 1000 ? this.props.counts.media : numeral(this.props.counts.media).format('0a') }
+                { this.props.counts.media < 1000 ? this.props.counts.media : numeral(this.props.counts.media).format('0.0a') }
                 <div className='profile-counts-label'>Posts</div>
               </div>
-              <div className='col-xs-4 col-md-3 col-md-offset-2'>
-                {numeral(this.props.counts.followers).format('0.0a')}
+              <div className='col-xs-4 col-md-3 col-md-offset-2'>  
+                { this.props.counts.followers < 1000000 ? numeral(this.props.counts.followers).format('0a') : numeral(this.props.counts.followers).format('0.00a') }
                 <div className='profile-counts-label'>Followers</div>
               </div>
               <div className='col-xs-4 col-md-3 col-md-offset-2'>
@@ -50,11 +50,11 @@ class Profile extends React.Component {
         </div>
 
         <div className='row'>
-          <div id="full_name">{ this.props.full_name }</div>
+          <div id="username">{ this.props.username }</div>
         </div>
 
         <div className='row'>
-          <div id="bio">{ this.props.bio }</div>
+          <div id="bio"><b>{ this.props.full_name } </b>{ this.props.bio }</div>
         </div>
 
         <div className='row'>
