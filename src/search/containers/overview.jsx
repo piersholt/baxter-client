@@ -18,6 +18,10 @@ let mapStateToProps = (state) => {
 
   segmentOutput = buildString(segmentOutput)
 
+  if (segmentOutput.length === 0) {
+    segmentOutput = 'No Category'
+  }
+
 
   let originOutput = []
   let searchParametersOrigins = state.search_parameters.origin
@@ -31,6 +35,9 @@ let mapStateToProps = (state) => {
 
   originOutput = buildString(originOutput)
 
+  if (originOutput.length === 0) {
+    originOutput = 'No Location'
+  }
 
   let minFollowersFormatted = numeral(state.search_parameters.minFollowers).format('0a')
   let maxFollowersFormatted = numeral(state.search_parameters.maxFollowers).format('0a')
