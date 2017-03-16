@@ -100,6 +100,43 @@ const payload = (state = [], action) => {
   }
 }
 
+const error = (state = null, action) => {
+  switch (action.type) {
+    case QueryActions.SEARCH_SUCCESS:
+      return null
+    case QueryActions.SEARCH_REQUEST:
+      if (action.error === true) {
+        return action.payload.message
+      } else {
+        return state
+      }
+    case QueryActions.PAGINATE_REQUEST:
+      if (action.error === true) {
+        return action.payload.message
+      } else {
+        return state
+      }
+    case QueryActions.PAGINATE_SUCCESS:
+      return null
+    case QueryActions.SEARCH_FAILURE:
+      return 'Search has failed!'
+    case QueryActions.PAGINATE_FAILURE:
+      return 'Pagination has failed!'
+    case 'AUTHENTICATE_COMPLETE':
+      return null
+    case 'AUTHENTICATE_ERROR':
+      return 'Please sign in.'
+    case InterfaceActions.DISMISS_ERROR:
+      if (action.dismissalType === 'clickaway') {
+        return null
+      } else {
+        return state
+      }
+    default:
+      return state
+  }
+}
+
 const searchReducer = combineReducers({
   auth: authStateReducer,
   accounts,
@@ -108,7 +145,8 @@ const searchReducer = combineReducers({
   showFilter,
   payload,
   isFetching,
-  maps
+  maps,
+  error
 })
 
 export default searchReducer;
