@@ -38,7 +38,7 @@ class Profile extends React.Component {
                 <div className='profile-counts-label'>Posts</div>
               </div>
               <div className='col-xs-4 col-md-3 col-md-offset-2'>
-                {numeral(this.props.counts.followers).format('0.0a')}
+                {numeral(this.props.counts.followers).format('0a')}
                 <div className='profile-counts-label'>Followers</div>
               </div>
               <div className='col-xs-4 col-md-3 col-md-offset-2'>
