@@ -24,6 +24,10 @@ const isFetching = (state = false, action) => {
       return false
     case QueryActions.PAGINATE_SUCCESS:
       return false
+    case QueryActions.SEARCH_FAILURE:
+      return false
+    case QueryActions.PAGINATE_FAILURE:
+      return false
     default:
       return state
   }
