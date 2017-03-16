@@ -79,7 +79,11 @@ export function newSearch(parameters) {
     [CALL_API]: {
       endpoint: parsed_endpoint,
       method: 'GET',
-      types: [{ type: QueryActions.SEARCH_REQUEST, meta: { parameters: parameters, showFilter: false} }, { type: QueryActions.SEARCH_SUCCESS, meta: { parameters: parameters, showFilter: false} }, QueryActions.SEARCH_FAILURE]
+      types: [
+        { type: QueryActions.SEARCH_REQUEST, meta: { parameters: parameters, showFilter: false} },
+        { type: QueryActions.SEARCH_SUCCESS, meta: { parameters: parameters, showFilter: false} },
+        QueryActions.SEARCH_FAILURE
+      ]
     }
   }
 }
@@ -95,7 +99,11 @@ export function paginateSearch(parameters) {
     [CALL_API]: {
       endpoint: parsed_endpoint,
       method: 'GET',
-      types: [QueryActions.PAGINATE_REQUEST, { type: QueryActions.PAGINATE_SUCCESS, meta: { parameters: parameters} }, QueryActions.PAGINATE_FAILURE]
+      types: [
+        QueryActions.PAGINATE_REQUEST,
+        { type: QueryActions.PAGINATE_SUCCESS, meta: { parameters: parameters} },
+        QueryActions.PAGINATE_FAILURE
+      ]
     }
   }
 }
