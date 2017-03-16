@@ -19,9 +19,17 @@ const selected = (state = false, action) => {
 const isFetching = (state = false, action) => {
   switch (action.type) {
     case QueryActions.SEARCH_REQUEST:
-      return true
+      if (action.error === true) {
+        return false
+      } else {
+        return true
+      }
     case QueryActions.PAGINATE_REQUEST:
-      return true
+      if (action.error === true) {
+        return false
+      } else {
+        return true
+      }
     case QueryActions.SEARCH_SUCCESS:
       return false
     case QueryActions.PAGINATE_SUCCESS:
