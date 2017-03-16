@@ -56,6 +56,14 @@ const search_parameters = (state = {}, action) => {
       return Object.assign({}, state, action.meta.parameters)
     case QueryActions.PAGINATE_SUCCESS:
       return Object.assign({}, state, action.meta.parameters)
+    case QueryActions.PAGINATE_FAILURE:
+      return Object.assign({}, state, { page: state.page - 1 })
+    case QueryActions.PAGINATE_REQUEST:
+      if (action.error === true) {
+        return Object.assign({}, state, { page: state.page - 1 })
+      } else {
+        return state
+      }
     // case InterfaceActions.CHANGE_SEARCH_PARAMETERS:
     //   return Object.assign({}, state, action.parameters)
     default:
