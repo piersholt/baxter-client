@@ -7,7 +7,8 @@ export const InterfaceActions = {
   ADD_ACCOUNTS: 'ADD_ACCOUNTS',
   SELECT_ACCOUNT: 'SELECT_ACCOUNT',
   SHOW_FILTER: 'SHOW_FILTER',
-  CHANGE_SEARCH_PARAMETERS: 'CHANGE_SEARCH_PARAMETERS'
+  CHANGE_SEARCH_PARAMETERS: 'CHANGE_SEARCH_PARAMETERS',
+  DISMISS_ERROR: 'DISMISS_ERROR'
 }
 
 export const QueryActions = {
@@ -55,6 +56,13 @@ export function changeSearchParameters(parameters) {
   return {
     type: InterfaceActions.CHANGE_SEARCH_PARAMETERS,
     parameters: parameters
+  }
+}
+
+export function dismissError(type) {
+  return {
+    type: InterfaceActions.DISMISS_ERROR,
+    dismissalType: type
   }
 }
 
