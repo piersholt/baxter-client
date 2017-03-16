@@ -12,7 +12,6 @@ class Filter extends React.Component {
       s_l: (this.props.s_l),
       s_hf: (this.props.s_hf),
       s_cp: (this.props.s_cp),
-      s_cp: (this.props.s_cp),
       s_ap: (this.props.s_ap),
       s_t: (this.props.s_t),
       segmentFitness: (this.props.segmentFitness),
