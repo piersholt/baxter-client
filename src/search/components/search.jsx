@@ -8,7 +8,13 @@ import { FilterContainer } from '../containers/filter'
 import { OverviewContainer } from '../containers/overview'
 import CircularProgress from 'material-ui/CircularProgress';
 
+import Snackbar from 'material-ui/Snackbar';
+
 class Search extends Component {
+  handleRequestClose = (type) => {
+    this.props.dismissError(type);
+  };
+
   showFilter() {
     if (this.props.showFilter === true) {
       return (
@@ -80,6 +86,13 @@ class Search extends Component {
             { /** Selected Profile **/ }
             <div className="col-md-3" id="SearchProfile">
               { this.showProfile() }
+            </div>
+            <div>
+              <Snackbar
+                open={this.props.showError}
+                message={this.props.errorMessage}
+                autoHideDuration={ 10000 }
+                onRequestClose={this.handleRequestClose} />
             </div>
           </div>
         </div>

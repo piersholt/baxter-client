@@ -8,7 +8,9 @@ const selected = (state = false, action) => {
     case InterfaceActions.SELECT_ACCOUNT:
       return action.account_id
     case QueryActions.SEARCH_SUCCESS:
-      return action.payload.data[0].id
+      if (action.payload.data.length > 0) {
+        return action.payload.data[0].id }
+      else { return state }
     default:
       return state
   }
@@ -17,12 +19,24 @@ const selected = (state = false, action) => {
 const isFetching = (state = false, action) => {
   switch (action.type) {
     case QueryActions.SEARCH_REQUEST:
-      return true
+      if (action.error === true) {
+        return false
+      } else {
+        return true
+      }
     case QueryActions.PAGINATE_REQUEST:
-      return true
+      if (action.error === true) {
+        return false
+      } else {
+        return true
+      }
     case QueryActions.SEARCH_SUCCESS:
       return false
     case QueryActions.PAGINATE_SUCCESS:
+      return false
+    case QueryActions.SEARCH_FAILURE:
+      return false
+    case QueryActions.PAGINATE_FAILURE:
       return false
     default:
       return state
@@ -50,6 +64,14 @@ const search_parameters = (state = {}, action) => {
       return Object.assign({}, state, action.meta.parameters)
     case QueryActions.PAGINATE_SUCCESS:
       return Object.assign({}, state, action.meta.parameters)
+    case QueryActions.PAGINATE_FAILURE:
+      return Object.assign({}, state, { page: state.page - 1 })
+    case QueryActions.PAGINATE_REQUEST:
+      if (action.error === true) {
+        return Object.assign({}, state, { page: state.page - 1 })
+      } else {
+        return state
+      }
     // case InterfaceActions.CHANGE_SEARCH_PARAMETERS:
     //   return Object.assign({}, state, action.parameters)
     default:
@@ -72,8 +94,8 @@ const accounts = (state = [], action) => {
     case InterfaceActions.ADD_ACCOUNTS:
       return [...state].concat(action.accounts)
     // Query
-    // case QueryActions.SEARCH_REQUEST:
-    //   return []
+    case QueryActions.SEARCH_REQUEST:
+      return []
     case QueryActions.PAGINATE_SUCCESS:
       return [...state, ...action.payload.data]
     case QueryActions.SEARCH_SUCCESS:
@@ -94,6 +116,48 @@ const payload = (state = [], action) => {
   }
 }
 
+const error = (state = null, action) => {
+  switch (action.type) {
+    case QueryActions.SEARCH_SUCCESS:
+      if (action.payload.data.length === 0) {
+        return 'No results. Ensure a State, and an appropriate Follower range is selected.'
+      }
+      else {
+        return null
+      }
+    case QueryActions.SEARCH_REQUEST:
+      if (action.error === true) {
+        return action.payload.message
+      } else {
+        return state
+      }
+    case QueryActions.PAGINATE_REQUEST:
+      if (action.error === true) {
+        return action.payload.message
+      } else {
+        return state
+      }
+    case QueryActions.PAGINATE_SUCCESS:
+      return null
+    case QueryActions.SEARCH_FAILURE:
+      return 'Ok, something has broken. I couldn\'t get more data!'
+    case QueryActions.PAGINATE_FAILURE:
+      return 'Ok, something has broken. I couldn\'t get more data!'
+    case 'AUTHENTICATE_COMPLETE':
+      return null
+    case 'AUTHENTICATE_ERROR':
+      return 'Please sign in.'
+    case InterfaceActions.DISMISS_ERROR:
+      if (action.dismissalType === 'clickaway') {
+        return null
+      } else {
+        return state
+      }
+    default:
+      return state
+  }
+}
+
 const searchReducer = combineReducers({
   auth: authStateReducer,
   accounts,
@@ -102,7 +166,8 @@ const searchReducer = combineReducers({
   showFilter,
   payload,
   isFetching,
-  maps
+  maps,
+  error
 })
 
 export default searchReducer;

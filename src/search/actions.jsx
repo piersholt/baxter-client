@@ -7,14 +7,17 @@ export const InterfaceActions = {
   ADD_ACCOUNTS: 'ADD_ACCOUNTS',
   SELECT_ACCOUNT: 'SELECT_ACCOUNT',
   SHOW_FILTER: 'SHOW_FILTER',
-  CHANGE_SEARCH_PARAMETERS: 'CHANGE_SEARCH_PARAMETERS'
+  CHANGE_SEARCH_PARAMETERS: 'CHANGE_SEARCH_PARAMETERS',
+  DISMISS_ERROR: 'DISMISS_ERROR'
 }
 
 export const QueryActions = {
   SEARCH_REQUEST: 'SEARCH_REQUEST',
   SEARCH_SUCCESS: 'SEARCH_SUCCESS',
   PAGINATE_REQUEST: 'PAGINATE_REQUEST',
-  PAGINATE_SUCCESS: 'PAGINATE_SUCCESS'
+  PAGINATE_SUCCESS: 'PAGINATE_SUCCESS',
+  SEARCH_FAILURE: 'SEARCH_FAILURE',
+  PAGINATE_FAILURE: 'PAGINATE_FAILURE'
 }
 
 /*
@@ -56,6 +59,13 @@ export function changeSearchParameters(parameters) {
   }
 }
 
+export function dismissError(type) {
+  return {
+    type: InterfaceActions.DISMISS_ERROR,
+    dismissalType: type
+  }
+}
+
 // API CALLS
 
 import { CALL_API } from 'redux-api-middleware';
@@ -69,7 +79,11 @@ export function newSearch(parameters) {
     [CALL_API]: {
       endpoint: parsed_endpoint,
       method: 'GET',
-      types: [{ type: QueryActions.SEARCH_REQUEST, meta: { parameters: parameters, showFilter: false} }, { type: QueryActions.SEARCH_SUCCESS, meta: { parameters: parameters, showFilter: false} }, 'FAILURE']
+      types: [
+        { type: QueryActions.SEARCH_REQUEST, meta: { parameters: parameters, showFilter: false} },
+        { type: QueryActions.SEARCH_SUCCESS, meta: { parameters: parameters, showFilter: false} },
+        QueryActions.SEARCH_FAILURE
+      ]
     }
   }
 }
@@ -85,7 +99,11 @@ export function paginateSearch(parameters) {
     [CALL_API]: {
       endpoint: parsed_endpoint,
       method: 'GET',
-      types: [QueryActions.PAGINATE_REQUEST, { type: QueryActions.PAGINATE_SUCCESS, meta: { parameters: parameters} }, 'FAILURE']
+      types: [
+        QueryActions.PAGINATE_REQUEST,
+        { type: QueryActions.PAGINATE_SUCCESS, meta: { parameters: parameters} },
+        QueryActions.PAGINATE_FAILURE
+      ]
     }
   }
 }

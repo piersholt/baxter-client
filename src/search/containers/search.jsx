@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import Search from '../components/search'
+import { dismissError } from '../actions'
 
 let mapStateToProps = (state) => {
   let showResults = false
@@ -7,6 +8,8 @@ let mapStateToProps = (state) => {
   let showOverview = !showFilter
   let showFetching = false
   let showProfile = false
+  let showError = false
+  let errorMessage = null
 
   if (state.accounts.length > 0 ) {
     showResults = true
@@ -21,18 +24,27 @@ let mapStateToProps = (state) => {
     showProfile = true
   }
 
+  if (state.error != null) {
+    showError = true
+    errorMessage = state.error
+  }
+
   return {
     showResults: showResults,
     showFilter: showFilter,
     showOverview: showOverview,
     showFetching: showFetching,
-    showProfile: showProfile
+    showProfile: showProfile,
+    showError: showError,
+    errorMessage: errorMessage
   }
 };
 
 let mapDispatchToProps = (dispatch) => {
   return {
-
+    dismissError: (manual) => {
+      dispatch(dismissError(manual));
+    }
   }
 };
 
