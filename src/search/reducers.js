@@ -8,7 +8,9 @@ const selected = (state = false, action) => {
     case InterfaceActions.SELECT_ACCOUNT:
       return action.account_id
     case QueryActions.SEARCH_SUCCESS:
-      return action.payload.data[0].id
+      if (action.payload.data.length > 0) {
+        return action.payload.data[0].id }
+      else { return state }
     default:
       return state
   }
