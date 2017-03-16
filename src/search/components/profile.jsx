@@ -24,7 +24,7 @@ class Profile extends React.Component {
 
         <div className='row'>
           <div className='col-xs-3 col-md-3 nopadding'>
-            <img className='img-circle' role="presentation" src={this.props.profile_picture} width='96' />
+            <img className='img-circle' role="presentation" src={this.props.profile_picture} width='92' />
           </div>
           <div className='col-xs-9 col-md-9'>
             <div className='row profile-actions'>
@@ -50,11 +50,11 @@ class Profile extends React.Component {
         </div>
 
         <div className='row'>
-          <div id="full_name">{ this.props.full_name }</div>
+          <div id="username">{ this.props.username }</div>
         </div>
 
         <div className='row'>
-          <div id="bio">{ this.props.bio }</div>
+          <div id="bio"><b>{ this.props.full_name } </b>{ this.props.bio }</div>
         </div>
 
         <div className='row'>

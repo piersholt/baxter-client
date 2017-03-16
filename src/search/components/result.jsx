@@ -17,17 +17,14 @@ class Result extends React.Component {
         <td className="result-bio">
           <div className="row">
             <div className="col-md-12">
-              <div className="full-name">
-                { this.props.account.full_name }
-              </div>
               <div className="username">
-                @{ this.props.account.username }
+                { this.props.account.username }
               </div>
             </div>
           </div>
           <div className="row">
             <div className="col-md-12">
-              <div className="second">{ this.props.account.bio }</div>
+              <div className="second"><b>{ this.props.account.full_name } </b>{ this.props.account.bio }</div>
             </div>
           </div>
         </td>
