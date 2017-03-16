@@ -119,7 +119,12 @@ const payload = (state = [], action) => {
 const error = (state = null, action) => {
   switch (action.type) {
     case QueryActions.SEARCH_SUCCESS:
-      return null
+      if (action.payload.data.length === 0) {
+        return 'No results. Ensure a State, and an appropriate Follower range is selected.'
+      }
+      else {
+        return null
+      }
     case QueryActions.SEARCH_REQUEST:
       if (action.error === true) {
         return action.payload.message
