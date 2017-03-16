@@ -147,6 +147,8 @@ const error = (state = null, action) => {
       return null
     case 'AUTHENTICATE_ERROR':
       return 'Please sign in.'
+    case 'EMAIL_SIGN_IN_COMPLETE':
+      return null
     case InterfaceActions.DISMISS_ERROR:
       if (action.dismissalType === 'clickaway') {
         return null
