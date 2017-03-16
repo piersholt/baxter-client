@@ -14,7 +14,7 @@ body, html {
   line-height: 19px !important;
   font-family: Circular, sans-serif;
   font-weight: normal;
-  font-size: 19px !important;
+  font-size: 17px !important;
   padding-right: 200px;
 }
 
@@ -118,9 +118,9 @@ select::-ms-expand {
 
 #SearchFilterResults {
   height: 100%;
-  padding-top: 72px;
+  padding-top: 64px;
   padding-left: 0px;
-  padding-right: 400px;
+  padding-right: 360px;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -139,7 +139,7 @@ select::-ms-expand {
 #SearchResults {
   padding-left: 0px;
   padding-right: 0px;
-  padding-bottom: 100px;
+  padding-bottom: 92px;
   overflow-y: scroll;
   top: 0;
   bottom: 0;
@@ -161,7 +161,7 @@ select::-ms-expand {
 }
 
 #SearchProfile {
-  width: 400px;
+  width: 360px;
   height: 100%;
   padding-top: 88px;
   padding-left: 34px;
@@ -182,7 +182,6 @@ select::-ms-expand {
 
 a {
   font-family: Circular, sans-serif;
-
   font-weight: normal;
   font-size: 14px;
   color: #FF3B30 !important;
@@ -249,12 +248,12 @@ a:hover {
 .btn-rounded-jumbo {
   font-family: Circular, sans-serif;
   font-weight: 500;
-  font-size: 19px !important;
+  font-size: 17px !important;
   color: #FFFFFF !important;
   padding-left: 32px !important;
   padding-right: 32px !important;
   background-color: #FF4C42;
-  height: 48px;
+  height: 44px;
   min-width: 200px;
   border-radius: 24px !important;
   border: none;
@@ -271,8 +270,8 @@ a:hover {
 .btn-cancel {
   font-family: Circular, sans-serif;
   font-weight: normal;
-  font-size: 19px !important;
-  color: #575757 !important;
+  font-size: 17px !important;
+  color: #FF4C42 !important;
   padding-left: 24px !important;
   padding-right: 24px !important;
   margin-left: 8px;
@@ -296,13 +295,13 @@ a:hover {
 }
 
 .navbar-inverse {
-  height: 72px;
+  height: 64px;
   background-color: #282828 !important;
   background-image: none !important;
 }
 
 #Search {
-  padding-top: 72px;
+  padding-top: 64px;
 }
 
 #fixed-view {
@@ -324,7 +323,7 @@ table, .table {
 }
 
 tr {
-  height: 100px;
+  height: 92px;
 }
 
 th {
@@ -349,7 +348,7 @@ td:first-child:after, .td:first-child:after {
   pointer-events: none;
   content: '';
   position: absolute;
-  height: 81px;
+  height: 77px;
   padding-bottom: -10px;
   left: 0;
   right: 0;
@@ -367,7 +366,7 @@ td:first-child:after, .td:first-child:after {
 .result-metric {
   font-family: Circular, sans-serif;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 17px;
   color: #333333;
   width: 8%;
 }
@@ -381,24 +380,24 @@ td:first-child:after, .td:first-child:after {
   width: 98px;
 }
 
-.full-name {
+.username {
   font-family: Circular, sans-serif;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 17px;
   color: #000000;
 }
 
 #bio {
   font-family: Circular, sans-serif;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 13px;
   color: #333333;
 }
 
-#full_name {
+#username {
   font-family: Circular, sans-serif;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 22px;
   color: #000000;
   padding-top: 14px;
 }
@@ -453,7 +452,7 @@ td:first-child:after, .td:first-child:after {
 .filter-form {
   font-family: Circular, sans-serif;
   font-weight: normal;
-  font-size: 19px;
+  font-size: 17px;
   color: #575757;
 }
 
@@ -468,12 +467,13 @@ td:first-child:after, .td:first-child:after {
   margin-top: 44px;
   margin-left: 80px !important;
   margin-right: 80px !important;
+  padding-bottom: 44px;
 }
 
 .filter-header {
   font-family: Circular, sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
   color: #333333;
   padding-bottom: 24px;
 }
@@ -489,7 +489,7 @@ td:first-child:after, .td:first-child:after {
 .filter-label {
   font-family: Circular, sans-serif;
   font-weight: normal;
-  font-size: 19px;
+  font-size: 17px;
   color: #575757;
   line-height: 20px;
   min-width: 320px;
@@ -516,7 +516,7 @@ hr {
 }
 
 .navbar-brand {
-  margin-top: 14px;
+  margin-top: 10px;
   margin-left: -4px !important;
 }
 
