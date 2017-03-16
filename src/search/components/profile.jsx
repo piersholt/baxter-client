@@ -34,7 +34,7 @@ class Profile extends React.Component {
             </div>
             <div className='row profile-counts'>
               <div className='col-xs-4 col-md-2'>
-                { this.props.counts.media < 1000 ? this.props.counts.media : numeral(this.props.counts.media).format('0a') }
+                { this.props.counts.media < 1000 ? this.props.counts.media : numeral(this.props.counts.media).format('0.0a') }
                 <div className='profile-counts-label'>Posts</div>
               </div>
               <div className='col-xs-4 col-md-3 col-md-offset-2'>
