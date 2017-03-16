@@ -20,6 +20,9 @@ class Result extends React.Component {
               <div className="full-name">
                 { this.props.account.full_name }
               </div>
+              <div className="username">
+                @{ this.props.account.username }
+              </div>
             </div>
           </div>
           <div className="row">
