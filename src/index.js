@@ -13,7 +13,7 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 import { syncHistoryWithStore } from 'react-router-redux'
 
 import { SearchContainer } from './search/containers/search';
-import SignIn from './authentication/components/sign_in';
+import { SignInContainer } from './authentication/containers/sign_in';
 
 const reduxSyncHistory = syncHistoryWithStore(browserHistory, store)
 
@@ -39,8 +39,8 @@ store.dispatch(configure(
   ReactDOM.render(
     <Router history={reduxSyncHistory}>
       <Route path="/" component={BaxterApp}>
-        <Route path="/sign_in" component={SignIn} />
         <IndexRoute component={SearchContainer} onEnter={checkAuth}/>
+        <Route path="/sign_in" component={SignInContainer} />
       </Route>
     </Router>, document.getElementById('root')
   );
