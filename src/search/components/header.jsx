@@ -1,6 +1,5 @@
 // Core
 import React, { Component } from 'react';
-import {SignOutButton} from "redux-auth/bootstrap-theme";
 
 class Header extends Component {
   render() {
@@ -17,7 +16,6 @@ class Header extends Component {
             </ul>
             <ul className="nav navbar-nav navbar-right">
               <li></li>
-               <SignOutButton />
             </ul>
           </div>
         </div>
