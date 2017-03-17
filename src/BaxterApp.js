@@ -5,15 +5,13 @@ import '../public/fonts/font-face.css';
 // Core
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
+import { AuthGlobals } from "redux-auth/bootstrap-theme";
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import store from './store';
-import { configure } from "redux-auth";
-import { AuthGlobals } from "redux-auth/bootstrap-theme";
 
 // Components
 import Header from './search/components/header';
-
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 class BaxterApp extends Component {
   render() {
@@ -36,10 +34,3 @@ class BaxterApp extends Component {
 }
 
 export default BaxterApp;
-
-export function renderApp() {
-  store.dispatch(configure(
-    { apiUrl: "https://dredger.piersholt.com:22786/api" },
-    { isServer: false, clientOnly: true, cleanSession: false, storage: "localStorage" }
-  ))
-}

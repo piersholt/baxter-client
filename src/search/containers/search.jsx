@@ -9,7 +9,7 @@ let mapStateToProps = (state) => {
   let showFetching = false
   let showProfile = false
   let showError = false
-  let errorMessage = null
+  let errorMessage = 'No errors. You shouldn\'t be seeing this!'
 
   if (state.accounts.length > 0 ) {
     showResults = true
