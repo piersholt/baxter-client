@@ -19,6 +19,17 @@ const reduxSyncHistory = syncHistoryWithStore(browserHistory, store)
 
 renderApp()
 import store from './store';
+const checkAuth = (nextState, replace, callback) => {
+  let loading = store.getState().auth.get('authentication').get('loading')
+  let signedIn = store.getState().auth.get('user').get('isSignedIn')
+
+  if (!loading && !signedIn) {
+    console.log('Not signed in!')
+    replace('/sign_in')
+  }
+
+  callback()
+}
 
 import { configure } from "redux-auth";
 store.dispatch(configure(
@@ -28,8 +39,8 @@ store.dispatch(configure(
   ReactDOM.render(
     <Router history={reduxSyncHistory}>
       <Route path="/" component={BaxterApp}>
-        <IndexRoute component={SearchContainer}/>
         <Route path="/sign_in" component={SignIn} />
+        <IndexRoute component={SearchContainer} onEnter={checkAuth}/>
       </Route>
     </Router>, document.getElementById('root')
   );
