@@ -1,24 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import BaxterApp from './BaxterApp';
-
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 
-import { renderApp } from "./BaxterApp";
+import store from './store';
 
 import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 import { syncHistoryWithStore } from 'react-router-redux'
+import { configure } from "redux-auth";
 
+import BaxterApp from './BaxterApp';
 import { SearchContainer } from './search/containers/search';
 import { SignInContainer } from './authentication/containers/sign_in';
 
 const reduxSyncHistory = syncHistoryWithStore(browserHistory, store)
 
-renderApp()
-import store from './store';
 const checkAuth = (nextState, replace, callback) => {
   let loading = store.getState().auth.get('authentication').get('loading')
   let signedIn = store.getState().auth.get('user').get('isSignedIn')
@@ -31,7 +29,6 @@ const checkAuth = (nextState, replace, callback) => {
   callback()
 }
 
-import { configure } from "redux-auth";
 store.dispatch(configure(
   { apiUrl: "https://dredger.piersholt.com:22786/api" },
   { isServer: false, clientOnly: true, cleanSession: false, storage: "localStorage" }
