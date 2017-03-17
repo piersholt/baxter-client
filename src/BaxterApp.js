@@ -36,10 +36,3 @@ class BaxterApp extends Component {
 }
 
 export default BaxterApp;
-
-export function renderApp() {
-  store.dispatch(configure(
-    { apiUrl: "https://dredger.piersholt.com:22786/api" },
-    { isServer: false, clientOnly: true, cleanSession: false, storage: "localStorage" }
-  ))
-}
