@@ -265,7 +265,7 @@ class Filter extends React.Component {
                   type="number"
                   value={this.state.minFollowers}
                   onChange={this.handleInputChange}
-                  className="form-control input-lg input-followers">
+                  className="form-control input-lg">
                   <option value="5000" selected="selected">5k</option>
                   <option value="10000">10k</option>
                   <option value="25000">25k</option>
@@ -286,7 +286,7 @@ class Filter extends React.Component {
                   type="number"
                   value={this.state.maxFollowers}
                   onChange={this.handleInputChange}
-                  className="form-control input-lg input-followers">
+                  className="form-control input-lg">
                   <option value="5000">5k</option>
                   <option value="10000">10k</option>
                   <option value="25000">25k</option>
