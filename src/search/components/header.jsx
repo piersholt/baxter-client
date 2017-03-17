@@ -8,7 +8,9 @@ class Header extends Component {
       <header className="navbar navbar-inverse navbar-fixed-top">
         <div className="container-fluid">
           <div className="navbar-header">
-            <Link className="navbar-brand" to="/"><img src={require('../../../public/logo-baxter@2x.png')}/></Link>
+            <Link className="navbar-brand" to="/">
+              <img  role="presentation" src={require('../../../public/logo-baxter@2x.png')}/>
+            </Link>
           </div>
 
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
