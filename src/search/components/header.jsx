@@ -15,6 +15,7 @@ class Header extends Component {
 
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav navbar-right">
+              {/* <Link className="navbar-brand" to="/sign_in">Sign In</Link> */}
             </ul>
           </div>
         </div>
