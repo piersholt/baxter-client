@@ -4,6 +4,9 @@ import searchReducer from './search/reducers'
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension';
 
+import { routerMiddleware } from 'react-router-redux'
+import { browserHistory } from 'react-router'
+
 let initialState = {
   showFilter: true,
   search_parameters:
@@ -51,6 +54,6 @@ let initialState = {
   }
 }
 
-const store = createStore(searchReducer, initialState, composeWithDevTools(applyMiddleware(thunk, apiMiddleware)));
+const store = createStore(searchReducer, initialState, composeWithDevTools(applyMiddleware(thunk, apiMiddleware, routerMiddleware(browserHistory))));
 
 export default store

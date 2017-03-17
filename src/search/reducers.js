@@ -3,6 +3,8 @@ import { QueryActions } from './actions'
 import {combineReducers } from 'redux'
 import {authStateReducer} from "redux-auth"
 
+import { routerReducer } from 'react-router-redux'
+
 const selected = (state = false, action) => {
   switch (action.type) {
     case InterfaceActions.SELECT_ACCOUNT:
@@ -169,7 +171,8 @@ const searchReducer = combineReducers({
   payload,
   isFetching,
   maps,
-  error
+  error,
+  routing: routerReducer
 })
 
 export default searchReducer;

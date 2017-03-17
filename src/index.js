@@ -9,11 +9,13 @@ import 'bootstrap/dist/css/bootstrap-theme.css';
 
 import { renderApp } from "./BaxterApp";
 
-import { Router, Route, hashHistory, IndexRoute } from 'react-router'
+import { Router, Route, browserHistory, IndexRoute } from 'react-router'
+import { syncHistoryWithStore } from 'react-router-redux'
 
 import { SearchContainer } from './search/containers/search';
 import SignIn from './authentication/components/sign_in';
 
+const reduxSyncHistory = syncHistoryWithStore(browserHistory, store)
 
 renderApp()
 import store from './store';
@@ -24,7 +26,7 @@ store.dispatch(configure(
   { isServer: false, clientOnly: true, cleanSession: false, storage: "localStorage" }
 )).then(() => {
   ReactDOM.render(
-    <Router history={hashHistory}>
+    <Router history={reduxSyncHistory}>
       <Route path="/" component={BaxterApp}>
         <IndexRoute component={SearchContainer}/>
         <Route path="/sign_in" component={SignIn} />
