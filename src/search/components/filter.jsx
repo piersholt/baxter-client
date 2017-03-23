@@ -266,6 +266,8 @@ class Filter extends React.Component {
                   value={this.state.minFollowers}
                   onChange={this.handleInputChange}
                   className="form-control input-lg">
+                  <option value="1000">1k</option>
+                  <option value="2500">2.5k</option>
                   <option value="5000" selected="selected">5k</option>
                   <option value="10000">10k</option>
                   <option value="25000">25k</option>
@@ -274,7 +276,6 @@ class Filter extends React.Component {
                   <option value="250000">250k</option>
                   <option value="500000">500k</option>
                   <option value="1000000">1m</option>
-                  <option value="5000000">5m</option>
                 </select>
               </div>
               <div className="col-md-1 element-followers-arrow nopadding">
@@ -287,6 +288,7 @@ class Filter extends React.Component {
                   value={this.state.maxFollowers}
                   onChange={this.handleInputChange}
                   className="form-control input-lg">
+                  <option value="2500">2.5k</option>
                   <option value="5000">5k</option>
                   <option value="10000">10k</option>
                   <option value="25000">25k</option>
